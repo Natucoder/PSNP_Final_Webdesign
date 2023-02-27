@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <title>PSNP</title>
+    <meta name="description" content="Free Bootstrap 4 Admin Theme | Pike Admin">
+    <meta name="author" content="Pike Web Development - https://www.pikephp.com">
+    
+        <!-- Favicon -->
+        <link rel="shortcut icon" href="../assets/images/favicon.ico">
+        <!-- Bootstrap CSS -->
+        <link href="../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <!-- Font Awesome CSS -->
+        <link href="../assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+        <!-- Custom CSS -->
+        <link href="../assets/css/style.css" rel="stylesheet" type="text/css" />
+        <!-- BEGIN CSS for this page -->
+
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap4.min.css" />
+        <!-- BEGIN CSS for Context Menu -->
+        <link rel="stylesheet" type="text/css" href="https://swisnl.github.io/jQuery-contextMenu/dist/jquery.contextMenu.min.css" />
+
+        <link href="../assets/css/bootstrap-datepicker.min.css" rel="stylesheet" />
+
+
+
+        <!-- END CSS for this page -->
+        
+
+
+
+    
+</head>
+<body>
+
+    <div>
+        
+
+
+        <main role="main">
+
+            <div id="main">
+                <!-- top bar navigation -->
+                <div class="headerbar">
+                    <!-- LOGO -->
+
+                    <div class="headerbar-left">
+                        <a href="index.html" class="logo">
+                            <img alt="logo" src="../assets/images/llogo.png" />
+                            <span><strong>MIS</strong> </span>
+                        </a>
+                    </div>
+
+                    <nav class="navbar-custom">
+
+                        <ul class="list-inline float-right mb-0">
+                            <li class="list-inline-item dropdown notif">
+                                <div id="cdateTime"></div>
+                            </li>
+                            <li class="list-inline-item dropdown notif">
+                                <a class="nav-link dropdown-toggle arrow-none" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+                                    <i class="fa fa-cog bigfonts"></i><span class=""></span>
+                                </a>
+
+                                <div class="dropdown-menu dropdown-menu-right profile-dropdown">
+                                    <!-- item-->
+                                    <div class="dropdown-item noti-title">
+                                        <h5 class="text-overflow"><small class="localize" data-key="Language Setting">Language Setting</small> </h5>
+                                    </div>
+                                    <!-- item-->
+                                    <a
+                                       class="dropdown-item  notify-item">
+                                        <i class="fa fa-dot-circle-o bigfonts"></i> <span>English</span>
+                                    </a>
+
+                                    <!-- item-->
+                                    <a
+                                       class="dropdown-item active notify-item">
+                                        <i class="fa fa-dot-circle-o bigfonts"></i>
+                                        <span>አማርኛ </span>
+                                    </a>
+                                    
+
+                                    <!-- item-->
+
+
+                                </div>
+                            </li>
+
+
+                            <li class="list-inline-item dropdown notif">
+
+                                <a class="nav-link dropdown-toggle nav-user" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+                                    <img src="../assets/images/avatars/admin.png" alt="Profile image" class="avatar-rounded">
+                                        <span class="profile-name">Hi, <span class="designation">henokdoss@gmail.com</span></span>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-right profile-dropdown">
+                                    
+                                   
+                                    <a class="dropdown-item notify-item" href="../editprofile.html">
+                                        <i class="fa fa-user"></i> <span>Edit Profile</span>
+                                    </a>
+
+                                    <!-- item-->
+                                    <a onclick="return ConfirmAlert('LogOut');" class="dropdown-item notify-item" href="../login.html">
+                                        <i class="fa fa-external-link"></i> <span>LogOut</span>
+                                    </a>
+
+                                </div>
+                            </li>
+
+                        </ul>
+
+                        <ul class="list-inline menu-left mb-0">
+                            <li class="float-left">
+                                <button class="button-menu-mobile open-left">
+                                    <i class="fa fa-fw fa-bars"></i>
+                                </button>
+                            </li>
+                        </ul>
+
+                    </nav>
+
+                </div>
+                <!-- End Navigation -->
+                <!-- Left Sidebar -->
+                <div class="left main-sidebar">
+
+                    <div class="sidebar-inner leftscroll">
+
+                        <div id="sidebar-menu">
+
+                            <ul class="list-unstyled">
+
+                                <li class="submenu">
+                                    <a class="" href="../index.html"><i class="fa fa-fw fa-bars"></i><span> Dashboard </span> </a>
+                                </li>
+                                
+                                <li class="submenu active">
+                                        <a class="subdrop"i class="fa fa-id-card bigfonts"></i> <span>Manage Households </span> <span class="menu-arrow"></span></a>
+                                        <ul class="list-unstyled" style="display: block">
+                                                <li> <a class="nav-link " href="gethouseholds.html">Manage Household Profiles</a></li>
+                                                <li > <a class="nav-link" href="managehhmemberlist.html">Manage Household Members</a></li>
+                                                <li > <a class="nav-link" href="managehhlistchardetail.html">Manage Household Characterstics</a></li>
+                                                <li class="active"> <a class="nav-link" href="hhlistassetdetail.html">Record Household Assets</a></li>
+                                            <!-- <li> <a class="nav-link" href="registration/manageassetlossdetaillist.html">Record Household Asset Loss</a></li> -->
+                                            <li> <a class="nav-link" href="hhfoodgapdetaillist.html">Track Household Food Gap</a></li>
+                                            <li> <a class="nav-link" href="shockhistorylist.html">Track Household Shock History</a></li>
+                                    
+                                        </ul>
+                                    </li>
+                                    <li class="submenu">
+                                            <a><i class="fa fa-fire" aria-hidden="true"></i> <span> HRD</span> <span class="menu-arrow"></span></a>
+                                            <ul class="list-unstyled">
+                                            <li> <a class="nav-link" href="../HRD/gethouseholds.html">Manage HRD Household Profile</a></li>
+                                            <li>
+                                           <a class="nav-link " href="../HRD/manageassetlossdetaillist.html">Record AssetLoss</a>
+                                            </li>
+                                                                         
+                                            </ul>
+                                           </li>
+<li class="submenu ">
+    <a><i class="fa fa-graduation-cap"></i> <span> Household Graduation  </span> <span class="menu-arrow"></span></a>
+    <ul class="list-unstyled" >
+        <li> <a class="nav-link" href="../Graduation/noticedetaillist.html">Notify Household</a></li>
+        <li>
+            <a class="nav-link" href="../Graduation/householdgradlist.html">HouseholdGraduation</a>
+        </li>
+        <li>
+            <a class="nav-link " href="../Graduation/memberexithhlist.html">Household Members Exit</a>
+        </li>
+
+    </ul>
+</li>
+<li class="submenu">
+    <a href="#"><i class="fa fa-file-o bigfonts"></i> <span> Targeting </span> <span class="menu-arrow"></span></a>
+    <ul class="list-unstyled">
+    <li><a href="../targeting/configure-targetcriteria.html">Configure Target Crieteria</a></li>
+    <li><a href="../targeting/view-targetcriteria.html">View Target With Crieteria</a></li>
+    </ul>
+</li>
+<li class="submenu">
+<a href="#"><i class="fa fa-book bigfonts"></i> <span> Enrollment </span> <span class="menu-arrow"></span></a>
+<ul class="list-unstyled">
+    <li><a href="../enrollment/location.html">Verify</a></li>
+    
+</ul>
+</li>
+<li class="submenu">
+    <a href="#"><i class="fa fa-flash bigfonts"></i> <span> Planning </span> <span class="menu-arrow"></span></a>
+   <ul class="list-unstyled">
+        <li><a href="../Planning/pw-activities-planing.html">PW Activities Planning</a></li>
+        <li><a href="../Planning/sub-project-budget-planing.html">Sub-Project Budget Planning</a></li>
+        <li><a href="../Planning/config-woreda-client.html">Configure Clients for Woreda</a></li>
+        <li><a href="../Livelihood/LH_Planning_Location.html">LH Planning</a></li>
+    </ul>
+</li>
+
+<li class="submenu">
+    <a href="#"><i class="fa fa-eercast bigfonts"></i> <span class="localize" data-key=""> Public Work </span> <span class="menu-arrow"></span></a>
+    <ul class="list-unstyled">
+
+
+        <li><a class="nav-link" href="../PublicWork/Pw-Schedule.html">Configure PW Schedule</a></li>
+        <li><a class="nav-link" href="../PublicWork/Getprogrampaymentitemlocation.html">Program Payment Item</a></li>
+        <li><a class="nav-link" href="../PublicWork/Configurewage-Rate.html">Configure PW Wage Rate</a></li>
+        <li><a href="../PublicWork/configurepdcalculation.html">Person Days (PD) Estimates</a></li>
+        <!-- <li><a class="nav-link" href="Common/GenericLocationView/GetLocationPopUp?ActionType=TDStransitions">TDS Transition</a></li> -->
+        <li><a href="../PublicWork/socialservicelocation.html">Link To SocialServices</a></li>
+        <li><a class="nav-link" href="../PublicWork/transitionlocation.html">PW Transition</a></li>
+        <li><a class="nav-link" href="../PublicWork/Attendancelocation.html">Print Attendance</a></li>
+        <!-- <li><a class="nav-link active" href="/PublicWork/PWAttendances/GetPWAttendanceLocations">Record Attendance</a></li> -->
+        <li><a class="nav-link" href="../PublicWork/period-location.html">Configure Period Closing</a></li>
+    </ul>
+</li>
+<li class="submenu">
+        <a href="#"><i class="fa fa-object-group" aria-hidden="true"></i> <span class="localize" data-key=""> Permanent Direct Support </span> <span class="menu-arrow"></span></a>
+        <ul class="list-unstyled">
+          <li><a class="nav-link localize" data-key="" href="../pds/pdsscheduleloc.html">Payment Schedule</a> </li>
+          <li><a class="nav-link localize" data-key="" href="../pds/socialserviceprovidersloc.html">Social Service Providers</a> </li>
+          <li><a class="nav-link localize" data-key="" href="../pds/pdslocation.html">Link to Social Service</a> </li>
+          <li><a class="nav-link localize" data-key="" href="../pds/locationdisability.html">Permanent Direct Support Disability</a> </li>
+          </ul>
+        </li>
+
+    <li class="submenu">
+        <a href="#"><i class="fa fa-usd bigfonts" aria-hidden="true"></i> <span> Budget </span> <span class="menu-arrow"></span></a>
+        <ul class="list-unstyled">
+             <li><a href="../Budget/BudgetType.html">Configure Budget Type</a></li>
+            <li><a href="../Budget/budgetCeiling.html">Budget Ceiling</a></li>
+            <li><a href="../Budget/BLocation.html">Budget Planning</a></li>
+            <li><a href="../Budget/BudgetAppr.html">Budget Approval</a></li>
+            <li><a href="../Budget/Cashflow.html">Cashflow Forcasting</a></li>
+            <li><a href="../Budget/location.html">Budget Reconcilation</a></li>
+            
+        </ul>
+    </li>
+
+<li class="submenu">
+        <a href="#"><i class="fa fa-paypal bigfonts" aria-hidden="true"></i> <span>Transfer</span> <span class="menu-arrow"></span></a>
+        <ul class="list-unstyled">
+            <li><a class="nav-link " href="../payroll/PWClient.html">Prepare PW Payroll</a></li>
+            <li><a class="nav-link" href="../payroll/PDSPayroll.html">Prepare PDS Payroll</a></li>
+            <li><a class="nav-link" href="../payroll/ApprovePayroll.html">Approve Payroll</a></li>
+            <li><a class="nav-link" href="../payroll/PrintExportPayroll.html">Print and Export Payroll</a></li>
+            <li><a class="nav-link" href="../payroll/LHTransfer.html">Transfer Payroll</a></li>
+            <li><a class="nav-link" href="../payroll/Reconcilation.html">Payment Reconciliation</a></li>
+            <li><a class="nav-link" href="../payroll/cashAtHand.html">Cash Management</a></li>
+        </ul>
+    </li>
+    <li class="submenu">
+        <a href="#"><i class="fa fa-credit-card bigfonts" aria-hidden="true"></i> <span>GRM</span> <span class="menu-arrow"></span></a>
+        <ul class="list-unstyled">
+            <li><a href="../GRM/ConfigureKAC.html">Configure KAC</a></li>
+            <li><a href="../GRM/CCLocation.html">Configure Complaints</a></li>
+            <li><a href="../GRM/RegisterKAC.html">Register Member</a></li>
+            <li><a href="../GRM/grmauthority.html">Configure GRM Authority</a></li>
+            <li><a href="../GRM/POLocation.html">Configure Position of Member</a></li>
+            <li><a href="../GRM/GRVLocation.html">Grievance Registration</a></li>
+            <li><a href="../GRM/GRV-Location.html">Grievance Resolution</a></li>
+        </ul>
+    </li>
+    <li class="submenu">
+        <a href="#"><i class="fa fa-rocket bigfonts" aria-hidden="true"></i> <span>Livelihood</span> <span class="menu-arrow"></span></a>
+        <ul class="list-unstyled">
+            <li><a href="../Livelihood/LH_Configure_Pathway_Add.html">Configure Pathway</a></li>
+            <li><a href="../Livelihood/LH_Transfer_View.html">View LH Transfer</a></li>
+            <li><a href="../Livelihood/LH_Planning_Location.html">LH Planning</a></li>
+            <li><a href="../Livelihood/LH_Pathway_Location.html">LH Activities</a></li>
+            <li><a href="../Livelihood/location.html">LH Prioritization</a></li>
+            <li><a href="../Livelihood/lh-location.html">Approve LH</a></li>
+            <li><a href="../Livelihood/lh-implementation.html">LH Implementation</a></li>
+        
+        
+        </ul>
+    </li>
+<li class="submenu ">
+        <a href="#"><i class="fa fa-chain bigfonts" aria-hidden="true"></i> <span class="localize" data-key="">M and E</span> <span class="menu-arrow"></span></a>
+        <ul class="list-unstyled">
+          <li><a  class="nav-link"  href="../ME/me-Configure-indicatorAddRoot.html">Configure Indicators</a></li>
+            <li><a class="nav-link"  href="../ME/me-target-annual.html">Target Indicators</a></li>
+            <li><a  class="nav-link"  href="../ME/me-report.html">Reports</a></li>
+            <li><a  class="nav-link"  href="../ME/me-ScoreCard.html">Score Card</a></li>
+        </ul>
+    </li>
+<li class="submenu">
+    <a href="#">
+        <i class="fa fa-users bigfonts" aria-hidden="true"></i> <span>User Account</span> <span class="menu-arrow"></span>
+    </a>
+    <ul class="list-unstyled">
+        <!-- <li><a href="Identity/Users/UsersList">User Account</a></li> -->
+    </ul>
+</li>
+<li class="submenu">
+    <a href="#"><i class="fa fa-pie-chart bigfonts" aria-hidden="true"></i> <span>Reports</span> <span class="menu-arrow"></span></a>
+    <ul class="list-unstyled">
+        <!-- <li><a class="nav-link" href="Report/TDSTransitionReport/GetReportLocations">Public WorkReport</a></li>
+        <li><a class="nav-link" href="Report/TDSTransitionReport/GetReportLocations?ActionType=TDSReport">HouseholdReport</a></li>
+        <li><a class="nav-link" href="Report/TDSTransitionReport/GetReportLocations?ActionType=TDSReport">TransferReport</a></li>
+        <li><a class="nav-link" href="Report/TDSTransitionReport/GetReportLocations?ActionType=TDSReport">AuditReport</a></li> -->
+    </ul>
+</li>
+
+<li class="submenu">
+    <a href="#"><i class="fa fa-cogs bigfonts"></i> <span> Maintainance </span> <span class="menu-arrow"></span></a>
+    <ul class="list-unstyled">
+        <li><a href="../Maintainance/maintainance-psnp.html">Configure PSNP</a></li>
+        <li><a href="../Maintainance/maintainance-region.html">Configure Region</a></li>
+        <li><a href="../Maintainance/maintainance-zone.html">Configure Zone</a></li>
+        <li><a href="../Maintainance/maintainance-woreda.html">Configure Woreda</a></li>
+        <li><a href="../Maintainance/maintainance-kebele.html">Configure Kebele</a></li>
+        <li><a href="../Maintainance/maintainance-community.html">Configure Community</a></li>
+        <li><a href="../Maintainance/maintainance-targeting-woreda.html">Configure Target Woredas</a></li>
+        <li><a href="../Maintainance/maintainance-martial-status.html">Configure Marital Status</a></li>
+        <li><a href="../Maintainance/configure-activities.html">Configure Activities</a></li>
+        <li><a href="../Maintainance/maintainance-transfer-type.html">Configure Transfer Type</a></li>
+        <li><a href="../Maintainance/maintainance-tds-type.html">Configure Tds Type</a></li>
+        <li><a href="../Maintainance/maintainance-attendance-type.html">Configure Attendance Type</a></li>
+        <li><a href="../Maintainance/maintainance-designation.html">Configure Designation</a></li>
+        <li><a href="../Maintainance/maintainance-wealth-ranking.html">Configure Wealth Ranking</a></li>
+        <!-- <li><a href="maintainance-woreda-client.html">Configure Clients for Woreda</a></li> -->
+        <li><a href="../Maintainance/maintainance-health-status.html">Configure Health Status</a></li>
+        <li><a href="../Maintainance/maintainance-maternal-condition.html">Configure Maternal cond.</a></li>
+        <li><a href="../Maintainance/maintainance-land-measurement.html">Configure Land Measeurment</a></li>
+        <li><a href="../Maintainance/maintainance-land-status.html">Configure Land Status</a></li>
+        <li><a href="../Maintainance/maintainance-livestokes.html">Configure Livestokes</a></li>
+        <li><a href="../Maintainance/maintainance-relationship.html">Configure Relationship Types</a></li>
+        <li><a href="../Maintainance/configure-project.html">Configure Project</a></li>
+        <li><a href="../Maintainance/configure-sub-project.html">Configure Sub-project</a></li>
+        <li><a href="../Maintainance/configure-units.html">Configure Units</a></li>
+        <li><a href="#">Configure worknorms</a></li>
+        <li><a href="../Maintainance/configure-quaters.html">Configure Quaters</a></li>
+        <li><a href="../Maintainance/configure-activities.html">Configure Activities</a></li>
+         
+    </ul>
+</li>
+<li class="submenu">
+    <a href="#"><i class="fa fa-gear bigfonts" aria-hidden="true"></i> <span class="localize" data-key=""> Settings and Configuration </span> <span class="menu-arrow"></span></a>
+    <ul class="list-unstyled">
+        <!-- <li><a class="nav-link localize" data-key="" href="/Settings/Settings/GetSettings">Settings</a> </li>
+        <li><a href="SystemMaintenance/Periods/GetPeriods">Configure Period</a></li> -->
+    </ul>
+</li>
+</ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Sidebar -->
+
+                <div class="content-page">
+    <!-- Start content -->
+    <div class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="breadcrumb-holder">
+                        <h1 class="main-title float-left">
+                            Economic Status
+                        </h1>
+                        <ol class="breadcrumb float-right">
+                            <li class="breadcrumb-item">HH Registration</li>
+                            <li class="breadcrumb-item">Record Asset Details</li>
+                            <li class="breadcrumb-item active">Economic Status</li>
+                        </ol>
+                        <div class="clearfix">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end row -->
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 tab-custom">
+
+                    <div class="row">
+                        <div class="col-sm-9">
+                            <ul class="nav nav-tabs">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="hhlistassetdetail.html">Household List</a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link active" href="assetdetails.html">Asset Detials</a>
+                                </li>
+
+                            </ul>
+                        </div>
+                        <div class="col-sm-3"><span class="mandatory"> * indicates mandatory </span></div>
+                    </div>
+
+                    <div class="card mb-3">
+
+                        <form data-parsley-validate novalidate method="post" action="#">
+
+                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 tab-custom">
+
+                                <div class="card mb-3">
+                                    <div class="card-body">
+                                        <div class="form-group row">
+                                            <input type="hidden" value="5edb3374-cc40-4096-b994-718e4968e0cd" id="hfID" data-val="true" data-val-required="The HouseholdId field is required." name="command.HouseholdId" />
+                                            <label for="rbtLivestock" class="col-sm-2 col-form-label">
+                                                Asset Catagory
+                                            </label>
+                                            <div class="col-sm-4">
+                                                    <select id="ddlLocalLanguageAssetCatagory" class="form-control" autofocus data-val="true" data-val-required="The AssetCategoryId field is required." name="command.AssetCategoryId">
+                                                        <option value="0">Choose ....</option>
+                                                    <option value="1">Fruitable Tree</option>
+</select>
+                                                
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group row">
+                                            <label for="" class="col-sm-2 col-form-label">
+                                                Asset Type
+                                            </label>
+                                            <div class="col-sm-4">
+                                                    <select id="ddlLocalLanguageAssetType" class="form-control" autofocus data-val="true" data-val-required="The AssetTypeId field is required." name="command.AssetTypeId">
+                                                        <option value="0">Choose ....</option>
+                                                    <option value="1">Mango</option>
+</select>
+                                                
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group row">
+                                            <label for="" class="col-sm-2 col-form-label">
+                                                Unit Of Measure
+                                            </label>
+                                            <div class="col-sm-4">
+                                                    <select id="ddlLocalLanguageMeasurmentUnit" class="form-control" autofocus data-val="true" data-val-required="The MeasurementUnitTypeId field is required." name="command.MeasurementUnitTypeId">
+                                                        <option value="0">Choose ....</option>
+                                                    <option value="1">&#x12AA;&#x120E; &#x130D;&#x122B;&#x121D;</option>
+<option value="2">&#x120A;&#x1275;&#x122D;</option>
+<option value="3">&#x1265;&#x122D;</option>
+</select>
+                                                
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="" class="col-sm-2 col-form-label">
+                                                Asset Grade
+                                            </label>
+                                            <div class="col-sm-4">
+                                                    <select id="ddlLocalLanguageAssetGrade" class="form-control" autofocus data-val="true" data-val-required="The AssetGradeId field is required." name="command.AssetGradeId">
+                                                        <option value="0">Choose ....</option>
+                                                    <option value="2">Bad</option>
+</select>
+                                                
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="" class="col-sm-2 col-form-label">
+                                                Asset Condition
+                                            </label>
+                                            <div class="col-sm-4">
+                                                    <select id="ddlLocalLanguageAssetCondition" class="form-control" autofocus data-val="true" data-val-required="The AssetConditionId field is required." name="command.AssetConditionId">
+                                                        <option value="0">Choose ....</option>
+                                                    <option value="1">Good</option>
+</select>
+                                                
+                                            </div>
+                                        </div>
+                                        <div class="row form-group">
+                                            <label for="datepicker" class="col-sm-2 col-form-label">Last Updated Date<span class="text-danger">*</span></label>
+                                            <div class="col-sm-4">
+                                                <!--<input id="datepicker" class="form-control"/>-->
+                                                <div class="custom-date input-group m-b-10 date datepicker">
+                                                    <input type="text" id="txtAssetLastUpdated" class="form-control" ondrop="return false" onkeypress="return blockSpecialChar(event)" onpaste="return false" placeholder="Select Date" required maxlength="20" autocomplete="off" autofocus data-val="true" data-val-required="The AssetLastUpdated field is required." name="command.AssetLastUpdated" value="">
+                                                    <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+                                        <div class="row form-group">
+                                            <label for="datepicker" class="col-sm-2 col-form-label">Asset Est. As of Date<span class="text-danger">*</span></label>
+                                            <div class="col-sm-4">
+                                                <!--<input id="datepicker" class="form-control"/>-->
+                                                <div class="custom-date input-group m-b-10 date datepicker">
+                                                    <input type="text" id="txtAssetEstimatedDate" class="form-control" ondrop="return false" onkeypress="return blockSpecialChar(event)" onpaste="return false" placeholder="Select Date" required maxlength="20" autocomplete="off" autofocus data-val="true" data-val-required="The AssetEstimatedAsOfDate field is required." name="command.AssetEstimatedAsOfDate" value="">
+                                                    <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+                                        <div class="row form-group">
+                                            <label for="HouseholdID" class="col-sm-2 col-form-label">Value (ETB)<span class="text-danger">*</span></label>
+                                            <div class="col-sm-4">
+                                                <input type="text" id="txtAssetValueInBirr" class="form-control" ondrop="return false" onkeypress="return blockSpecialChar(event)" onpaste="return false" placeholder="Value (ETB)" required maxlength="20" autocomplete="off" autofocus data-val="true" data-val-number="The field Value must be a number." data-val-required="The Value field is required." name="command.Value" value="">
+                                            </div>
+                                        </div>
+                                        <div class="row form-group">
+                                            <label for="HouseholdID" class="col-sm-2 col-form-label">Est. Market Value (ETB)<span class="text-danger">*</span></label>
+                                            <div class="col-sm-4">
+                                                <input type="text" id="txtEstimatedMarketValue" class="form-control" ondrop="return false" onkeypress="return blockSpecialChar(event)" onpaste="return false" placeholder="Est. Market Value (ETB)" required maxlength="20" autocomplete="off" autofocus data-val="true" data-val-number="The field EstimatedMarketValueInBirr must be a number." data-val-required="The EstimatedMarketValueInBirr field is required." name="command.EstimatedMarketValueInBirr" value="">
+                                            </div>
+                                        </div>
+                                        <div class="row form-group">
+                                            <label for="HouseholdID" class="col-sm-2 col-form-label">Remark (Eng)<span class="text-danger">*</span></label>
+                                            <div class="col-sm-4">
+                                                <textarea type="text" id="txtareaRemarkEng" class="form-control" ondrop="return false" onkeypress="return blockSpecialChar(event)" onpaste="return false" placeholder="Enter Remark (Eng)...." required maxlength="20" autocomplete="off" autofocus name="command.Remark_Eng">
+</textarea>
+                                            </div>
+                                        </div>
+                                        <div class="row form-group">
+                                            <label for="HouseholdID" class="col-sm-2 col-form-label">Remark (Amh)<span class="text-danger">*</span></label>
+                                            <div class="col-sm-4">
+                                                <textarea type="text" id="txtareaRemarkAmh" class="form-control" ondrop="return false" onkeypress="return blockSpecialChar(event)" onpaste="return false" placeholder="Enter Remark (Amh)...." required maxlength="20" autocomplete="off" autofocus name="command.Remark_Amh">
+</textarea>
+                                            </div>
+                                        </div>
+                                        <div class="row form-group">
+                                            <label for="HouseholdID" class="col-sm-2 col-form-label">Remark (Local)<span class="text-danger">*</span></label>
+                                            <div class="col-sm-4">
+                                                <textarea type="text" id="txtareaRemarkLocal" class="form-control" ondrop="return false" onkeypress="return blockSpecialChar(event)" onpaste="return false" placeholder="Enter Remark (Local)...." required maxlength="20" autocomplete="off" autofocus name="command.Remark_Eng">
+</textarea>
+                                            </div>
+                                        </div>
+                                                <div class="row form-group">
+                                                    <div class="col-sm-6">
+                                                        <input type="submit" onclick="return Validate('Save');" class="btn btn-primary" value=" Submit ">
+                                                        <button type="button" class="btn bg-danger"> Reset </button>
+                                                    </div>
+                                                </div>
+                                    </div>
+                                </div>
+
+
+
+
+
+
+                            </div>
+                        <input name="__RequestVerificationToken" type="hidden" value="CfDJ8FRkYCgI2dBIpJaI4xEi8GT5ZlHj7e7sRNlzd2Bzi_Th1EPnP7LuOiB3vdA5Ot0xFh716FehZgDux5EFaPWfK1-hwf3Xh8i3oOBFEs79LnJ5hYy76DZVxBRWv0qcQNugZ8CijWfRJjp2g-VFme3_uGZ7JtRrzVgJJHNgAKyNMVW9ZUJWC74-llyGaH5BuynKXw" /></form>
+                        <div class="card mb-3">
+                            <div class="card-body">
+                                <h2 class="title">View List</h2>
+                                <div class="table-responsive">
+
+                                    <table id="example1" class="table table-bordered table-hover display">
+                                        <thead>
+                                            <tr>
+                                                <th>No</th>
+                                                <th>HH Id No.</th>
+                                                <th>Asset Type</th>
+                                                <th>Asset Category</th>
+                                                <th>Asset Condition</th>
+                                                <th>Unit</th>
+                                                <th>Date of Est.</th>
+                                                <th>Market Value</th>
+                                                <th>Action</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- END container-fluid -->
+<!-- END container-fluid -->
+
+            </div>
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            <p>  <a href="/Home/Privacy">Privacy</a>   &copy;  Copyright 2019 MoLSA, Ministry of Agriculture(MoA), All rights reserved.</p>
+        </div>
+    </footer>
+    
+
+        <script src="../assets/js/jquery-1.10.2.min.js"></script>
+        <script src="../assets/js/modernizr.min.js"></script>
+        <script src="../assets/js/jquery.min.js"></script>
+        <script src="../assets/js/moment.min.js"></script>
+        <script src="../assets/js/jquery-ui.min.js"></script>
+        <script src="../assets/js/popper.min.js"></script>
+        <script src="../assets/js/bootstrap.min.js"></script>
+        <script src="../assets/js/jquery.validate.min.js"></script>
+        <script src="../assets/js/detect.js"></script>
+        <script src="../assets/js/fastclick.js"></script>
+        <script src="../assets/js/jquery.blockUI.js"></script>
+        <script src="../assets/js/jquery.nicescroll.js"></script>
+        <script src="../assets/js/bootstrap-datepicker.min.js"></script>
+        <!-- App js -->
+        <script src="../assets/js/pikeadmin.js"></script>
+        <!-- BEGIN Java Script for this page -->
+        <script src="../assets/js/Chart.min.js"></script>>
+        <!-- Counter-Up-->
+        <script src="../assets/plugins1/waypoints/lib/jquery.waypoints.min.js"></script>
+        <script src="../assets/plugins1/counterup/jquery.counterup.min.js"></script>
+
+        <script src="https://swisnl.github.io/jQuery-contextMenu/dist/jquery.contextMenu.min.js"></script>
+        <script src="https://code.highcharts.com/highcharts.js"></script>
+        <script src="https://code.highcharts.com/modules/exporting.js"></script>
+        <script src="https://code.highcharts.com/modules/export-data.js"></script>
+        
+        
+
+
+      
+            
+                <script src="../assets/js/canvasjs.min.js"></script>
+
+
+        <script>
+            $(document).ready(function () {
+                //$('#example1').DataTable();
+                $('.datepicker').datepicker({
+                    format: "dd-M-yyyy",
+                    todayBtn: "linked",
+                    autoclose: true,
+                    todayHighlight: true
+                });
+
+            });
+        </script>
+
+        <script>
+                        var currentdate = new Date();
+                        var weekday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+                        var month = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+                        var hours = currentdate.getHours();
+                        var minutes = currentdate.getMinutes();
+                        var ampm = hours >= 12 ? 'PM' : 'AM';
+                        hours = hours % 12;
+                        hours = hours ? hours : 12; // the hour '0' should be '12'
+                        minutes = minutes < 10 ? '0' + minutes : minutes;
+                        var strTime = hours + ':' + minutes + ' ' + ampm;
+
+
+                        var datetime = strTime + ", "
+                            + weekday[currentdate.getDay()] + ", "
+                            + month[currentdate.getMonth()] + " "
+                            + currentdate.getDate() + ", "
+                            //+ (currentdate.getMonth()+1)  + "/"
+                            + currentdate.getFullYear() + " "
+
+                        //+ currentdate.getFullYear() + " </br> "
+                                                            var currentdate = new Date();
+                                                            var weekday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+                                                            var month = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+                                                            var hours = currentdate.getHours();
+                                                            var minutes = currentdate.getMinutes();
+                                                            var ampm = hours >= 12 ? 'PM' : 'AM';
+                                                            hours = hours % 12;
+                                                            hours = hours ? hours : 12; // the hour '0' should be '12'
+                                                            minutes = minutes < 10 ? '0' + minutes : minutes;
+var strTime = hours + ':' + minutes + ' ' + ampm;
+
+
+var datetime = strTime + ", "
++ weekday[currentdate.getDay()] + ", "
++ month[currentdate.getMonth()] + " "
++ currentdate.getDate() + ", "
+//+ (currentdate.getMonth()+1)  + "/"
++ currentdate.getFullYear() + " "
+
+                                                            //+ currentdate.getFullYear() + " </br> "
+                    // + currentdate.getHours() + ":"
+                    // + currentdate.getMinutes() + " "
+                    // + currentdate.getSeconds();
+                    document.getElementById("cdateTime").innerHTML = datetime;
+
+                    //tree view location details script
+                    $(document).ready(function () {
+                        $.fn.extend({
+                            treed: function (o) {
+
+                                var openedClass = 'fa fa-minus';
+                                var closedClass = 'fa fa-plus';
+
+                                if (typeof o != 'undefined') {
+                                    if (typeof o.openedClass != 'undefined') {
+                                        openedClass = o.openedClass;
+                                    }
+                                    if (typeof o.closedClass != 'undefined') {
+                                        closedClass = o.closedClass;
+                                    }
+                                }
+                                ;
+
+                                //initialize each of the top levels
+                                var tree = $(this);
+                                tree.addClass("tree");
+                                tree.find('li').has("ul").each(function () {
+                                    var branch = $(this); //li with children ul
+                                    branch.prepend("<i class='indicator glyphicon " + closedClass + "'></i>");
+                                    branch.addClass('branch');
+                                    branch.on('click', function (e) {
+                                        if (this == e.target) {
+                                            var icon = $(this).children('i:first');
+                                            icon.toggleClass(openedClass + " " + closedClass);
+                                            $(this).children().children().toggle();
+                                        }
+                                    })
+                                    branch.children().children().toggle();
+                                });
+                                //fire event from the dynamically added icon
+                                tree.find('.branch .indicator').each(function () {
+                                    $(this).on('click', function () {
+                                        $(this).closest('li').click();
+                                    });
+                                });
+                                //fire event to open branch if the li contains an anchor instead of text
+                                tree.find('.branch>a').each(function () {
+                                    $(this).on('click', function (e) {
+                                        $(this).closest('li').click();
+                                        e.preventDefault();
+                                    });
+                                });
+                                //fire event to open branch if the li contains a button instead of text
+                                tree.find('.branch>button').each(function () {
+                                    $(this).on('click', function (e) {
+                                        $(this).closest('li').click();
+                                        e.preventDefault();
+                                    });
+                                });
+                            }
+                        });
+
+                        //Initialization of treeviews
+
+                        $('#tree1').treed();
+
+                        $('#tree2').treed({ openedClass: 'glyphicon-folder-open', closedClass: 'glyphicon-folder-close' });
+
+                        $('#tree3').treed({ openedClass: 'glyphicon-chevron-right', closedClass: 'glyphicon-chevron-down' });
+
+                    });
+                    // END CODE FOR BASIC DATA TABLE
+
+        </script>
+        <script>
+            $('#txtLevelEngSearch').keyup(function () {
+                var filter_text = $(this).val();
+                // If user input is not null
+                if (filter_text) {
+                    // Iterate through all branches
+                    $('.tree-li-ul').each(function () {
+                        // Initiate match flag to false for this branch
+                        var match_flag = false
+                        // Iterate through all items within one branch
+                        $(this).children().each(function () {
+                            // If user input matches this item
+                            if ($(this).children().text().toLowerCase().indexOf(filter_text) >= 0) {
+                                // Set match_flag for this branch to true
+                                match_flag = true;
+                                // Expand this branch
+                                $(this).parent().addClass('tree-open');
+                                // Show this item
+                                $(this).slideDown();
+                            }
+                            // If user input doesn't match this item
+                            else {
+                                // Hide this item
+                                $(this).slideUp();
+                                // If user input doesn't match any item in this branch, collapse this branch
+                                if (!match_flag) $(this).parent().parent().removeClass('tree-open');
+                            }
+                        });
+                    });
+
+                }
+                // If user input is null
+                else {
+                    // Hide all the branches
+                    $('.tree-li-ul').removeClass('tree-open');
+                    // Show all items
+                    $('.tree-li-ul-li').slideDown();
+                }
+            });
+        </script>
+        <!-- END Java Script for this page -->
+    
+    
+    <script src="../js/site.js?v=4q1jwFhaPaZgr8WAUSrux6hAuh0XDg9kPS3xIVq36I0"></script>
+    <script src="../js/localization/localization.js"></script>
+
+    <script>
+                // localization script
+                // Usage: requires class="localize" and data-key=
+                // Resharper creates and error on GetLocal but it is ok.
+            localize(``, 0);
+
+
+
+
+    </script>
+    
+
+    <script src="../js/Registration/AssetDetails-validation.js"></script>
+    <script src="../assets/js/jquery.dataTables.min.js"></script>
+    <script src="../assets/js/dataTables.bootstrap4.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#example1').DataTable();
+        });
+    </script>
+    <script type="text/javascript">
+        $('#ddlLocalLanguageAssetCatagory').change(function () {
+            if ($('#ddlLocalLanguageAssetCatagory').val() == 0) {
+                var items = "<option value='0'>Choose..</option>";
+                $('#ddlLocalLanguageAssetType').html(items);
+            }
+            else {
+                var url = '/' + "Registration/OtherAssetDetails/GetAssetTypesByAssetCategoryID";
+                var ddlsource = "#ddlLocalLanguageAssetCatagory";
+        $.getJSON(url, { Id: $(ddlsource).val() }, function (data) {
+            var items = '';
+            $("#ddlLocalLanguageAssetType").empty();
+            $.each(data, function (i, assetCategory) {
+                items += "<option value='" + assetCategory.value + "'>" + assetCategory.text + "</option>";
+            });
+            $('#ddlLocalLanguageAssetType').html(items);
+        });
+            }
+    });
+    </script>
+
+</body>
+</html>

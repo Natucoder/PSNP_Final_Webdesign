@@ -1,0 +1,1125 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <title>PSNP</title>
+    <meta name="description" content="Free Bootstrap 4 Admin Theme | Pike Admin">
+    <meta name="author" content="Pike Web Development - https://www.pikephp.com">
+    
+        <!-- Favicon -->
+        <link rel="shortcut icon" href="../assets/images/favicon.ico">
+        <!-- Bootstrap CSS -->
+        <link href="../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <!-- Font Awesome CSS -->
+        <link href="../assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+        <!-- Custom CSS -->
+        <link href="../assets/css/style.css" rel="stylesheet" type="text/css" />
+        <!-- BEGIN CSS for this page -->
+
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap4.min.css" />
+        <!-- BEGIN CSS for Context Menu -->
+        <link rel="stylesheet" type="text/css" href="https://swisnl.github.io/jQuery-contextMenu/dist/jquery.contextMenu.min.css" />
+
+        <link href="../assets/css/bootstrap-datepicker.min.css" rel="stylesheet" />
+        <link href="../assets/css/modal.css" rel="stylesheet" />
+        <!-- END CSS for this page -->
+    
+</head>
+<body>
+
+    <div>
+        
+
+
+        <main role="main">
+
+            <div id="main">
+                <!-- top bar navigation -->
+                <div class="headerbar">
+                    <!-- LOGO -->
+
+                    <div class="headerbar-left">
+                        <a href="index.html" class="logo">
+                            <img alt="logo" src="../assets/images/llogo.png" />
+                            <span><strong>MIS</strong> </span>
+                        </a>
+                    </div>
+
+                    <nav class="navbar-custom">
+
+                        <ul class="list-inline float-right mb-0">
+                            <li class="list-inline-item dropdown notif">
+                                <div id="cdateTime"></div>
+                            </li>
+                            <li class="list-inline-item dropdown notif">
+                                <a class="nav-link dropdown-toggle arrow-none" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+                                    <i class="fa fa-cog bigfonts"></i><span class=""></span>
+                                </a>
+
+                                <div class="dropdown-menu dropdown-menu-right profile-dropdown">
+                                    <!-- item-->
+                                    <div class="dropdown-item noti-title">
+                                        <h5 class="text-overflow"><small class="localize" data-key="Language Setting">Language Setting</small> </h5>
+                                    </div>
+                                    <!-- item-->
+                                    <a class="dropdown-item notify-item">
+                                        <i class="fa fa-dot-circle-o bigfonts"></i> <span>English</span>
+                                    </a>
+
+                                    <!-- item-->
+                                    <a class="dropdown-item notify-item">
+                                        <i class="fa fa-dot-circle-o bigfonts"></i>
+                                        <span>አማርኛ </span>
+                                    </a>
+                                    
+
+                                    <!-- item-->
+
+
+                                </div>
+                            </li>
+
+
+                            <li class="list-inline-item dropdown notif">
+                                <a class="nav-link dropdown-toggle nav-user" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+                                    <img src="../assets/images/avatars/admin.png" alt="Profile image" class="avatar-rounded">
+                                    <span class="profile-name">Pramod Barik <span class="designation">System Admin</span></span>
+
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-right profile-dropdown">
+                                    <!-- item-->
+                                    <div class="dropdown-item noti-title">
+                                        <h5 class="text-overflow"><small>Hello, admin</small> </h5>
+                                    </div>
+
+                                    <!-- item-->
+                                    <a href="../editprofile.html" class="dropdown-item notify-item">
+                                        <i class="fa fa-user"></i> <span>Profile</span>
+                                    </a>
+
+                                    <!-- item-->
+                                    <a onclick="return ConfirmAlert('LogOut');" class="dropdown-item notify-item" href="../login.html">
+                                        <i class="fa fa-external-link"></i> <span>LogOut</span>
+                                    </a>
+
+                                </div>
+                            </li>
+
+                        </ul>
+
+                        <ul class="list-inline menu-left mb-0">
+                            <li class="float-left">
+                                <button class="button-menu-mobile open-left">
+                                    <i class="fa fa-fw fa-bars"></i>
+                                </button>
+                            </li>
+                        </ul>
+
+                    </nav>
+
+                </div>
+                <!-- End Navigation -->
+                <!-- Left Sidebar -->
+                <div class="left main-sidebar">
+
+                    <div class="sidebar-inner leftscroll">
+            
+                        <div id="sidebar-menu">
+            
+                            <ul class="list-unstyled">
+            
+                                <li class="submenu">
+                                    <a class="" href="../index.html"><i class="fa fa-fw fa-bars"></i><span> Dashboard </span> </a>
+                                </li>
+                                
+                                <li >
+                                        <a><i class="fa fa-id-card bigfonts"></i> <span>Manage Households </span> <span class="menu-arrow"></span></a>
+                                        <ul class="list-unstyled" >
+                                                <li> <a class="nav-link " href="../registration/gethouseholds.html">Manage Household Profiles</a></li>
+                                                <li > <a class="nav-link" href="../registration/managehhmemberlist.html">Manage Household Members</a></li>
+                                                <li > <a class="nav-link" href="../registration/managehhlistchardetail.html">Manage Household Characterstics</a></li>
+                                                <li > <a class="nav-link" href="../registration/hhlistassetdetail.html">Record Household Assets</a></li>
+                                            <!-- <li> <a class="nav-link" href="registration/manageassetlossdetaillist.html">Record Household Asset Loss</a></li> -->
+                                            <li > <a class="nav-link" href="../registration/hhfoodgapdetaillist.html">Track Household Food Gap</a></li>
+                                            <li> <a class="nav-link" href="../registration/shockhistorylist.html">Track Household Shock History</a></li>
+                                    
+                                        </ul>
+                                    </li>
+                                    <li class="submenu">
+                                            <a><i class="fa fa-fire" aria-hidden="true"></i> <span> HRD</span> <span class="menu-arrow"></span></a>
+                                            <ul class="list-unstyled">
+                                            <li> <a class="nav-link" href="../HRD/gethouseholds.html">Manage HRD Household Profile</a></li>
+                                            <li>
+                                           <a class="nav-link " href="../HRD/manageassetlossdetaillist.html">Record AssetLoss</a>
+                                            </li>
+                                                                         
+                                            </ul>
+                                           </li>
+            <li class="submenu ">
+            <a><i class="fa fa-graduation-cap"></i> <span> Household Graduation  </span> <span class="menu-arrow"></span></a>
+            <ul class="list-unstyled" >
+            <li> <a class="nav-link" href="../Graduation/noticedetaillist.html">Notify Household</a></li>
+            <li>
+            <a class="nav-link" href="../Graduation/householdgradlist.html">HouseholdGraduation</a>
+            </li>
+            <li>
+            <a class="nav-link " href="../Graduation/memberexithhlist.html">Household Members Exit</a>
+            </li>
+            
+            </ul>
+            </li>
+            <li class="submenu ">
+            <a href="#" ><i class="fa fa-file-o bigfonts"></i> <span> Targeting </span> <span class="menu-arrow"></span></a>
+            <ul class="list-unstyled" >
+            <li ><a href="../targeting/configure-targetcriteria.html">Configure Target Crieteria</a></li>
+            <li><a href="../targeting/view-targetcriteria.html">View Target With Crieteria</a></li>
+            </ul>
+            </li>
+            <li class="submenu ">
+            <a href="#" ><i class="fa fa-book bigfonts"></i> <span> Enrollment </span> <span class="menu-arrow"></span></a>
+            <ul class="list-unstyled" >
+            <li><a href="../enrollment/location.html">Verify</a></li>
+            
+            </ul>
+            </li>
+            <li class="submenu">
+            <a href="#"><i class="fa fa-flash bigfonts"></i> <span> Planning </span> <span class="menu-arrow"></span></a>
+            <ul class="list-unstyled">
+            <li ><a href="../planning/pw-activities-planing.html">PW Activities Planning</a></li>
+            <li> <a href="../planning/sub-project-budget-planing.html">Sub-Project Budget Planning</a></li>
+            <li><a href="../planning/config-woreda-client.html">Configure Clients for Woreda</a></li>
+            <li><a href="../Livelihood/LH_Planning_Location.html">LH Planning</a></li>
+            </ul>
+            </li>
+            
+            <li class="submenu">
+            <a href="#"><i class="fa fa-eercast bigfonts"></i> <span class="localize" data-key=""> Public Work </span> <span class="menu-arrow"></span></a>
+            <ul class="list-unstyled">
+            
+            
+            <li><a class="nav-link" href="../PublicWork/Pw-Schedule.html">Configure PW Schedule</a></li>
+            <li><a class="nav-link" href="../PublicWork/Getprogrampaymentitemlocation.html">Program Payment Item</a></li>
+            <li><a class="nav-link" href="../PublicWork/Configurewage-Rate.html">Configure PW Wage Rate</a></li>
+            <li><a href="../PublicWork/configurepdcalculation.html">Person Days (PD) Estimates</a></li>
+            <!-- <li><a class="nav-link" href="Common/GenericLocationView/GetLocationPopUp?ActionType=TDStransitions">TDS Transition</a></li> -->
+            <li><a href="../PublicWork/socialservicelocation.html">Link To SocialServices</a></li>
+            <li><a class="nav-link" href="../PublicWork/transitionlocation.html">PW Transition</a></li>
+            <li><a class="nav-link" href="../PublicWork/Attendancelocation.html">Print Attendance</a></li>
+            <!-- <li><a class="nav-link active" href="/PublicWork/PWAttendances/GetPWAttendanceLocations">Record Attendance</a></li> -->
+            <li><a class="nav-link" href="../PublicWork/period-location.html">Configure Period Closing</a></li>
+            </ul>
+            </li>
+            <li class="submenu">
+                    <a href="#"><i class="fa fa-object-group" aria-hidden="true"></i> <span class="localize" data-key=""> Permanent Direct Support </span> <span class="menu-arrow"></span></a>
+                    <ul class="list-unstyled">
+                      <li><a class="nav-link localize" data-key="" href="../pds/pdsscheduleloc.html">Payment Schedule</a> </li>
+                      <li><a class="nav-link localize" data-key="" href="../pds/socialserviceprovidersloc.html">Social Service Providers</a> </li>
+                      <li><a class="nav-link localize" data-key="" href="../pds/pdslocation.html">Link to Social Service</a> </li>
+                      <li><a class="nav-link localize" data-key="" href="../pds/locationdisability.html">Permanent Direct Support Disability</a> </li>
+                      </ul>
+                    </li>
+          
+            <li class="submenu">
+            <a  href="#"><i class="fa fa-usd bigfonts" aria-hidden="true"></i> <span> Budget </span> <span class="menu-arrow"></span></a>
+            <ul class="list-unstyled">
+             <li><a href="../Budget/BudgetType.html">Configure Budget Type</a></li>
+            <li><a href="../Budget/budgetCeiling.html">Budget Ceiling</a></li>
+            <li><a href="../Budget/BLocation.html">Budget Planning</a></li>
+            <li><a href="../Budget/BudgetAppr.html">Budget Approval</a></li>
+            <li><a href="../Budget/Cashflow.html">Cashflow Forcasting</a></li>
+            <li><a href="../Budget/location.html">Budget Reconcilation</a></li>
+            
+            </ul>
+            </li>
+            
+            <li class="submenu">
+            <a href="#"><i class="fa fa-paypal bigfonts" aria-hidden="true"></i> <span>Transfer</span> <span class="menu-arrow"></span></a>
+            <ul class="list-unstyled">
+            <li><a class="nav-link " href="../payroll/PWClient.html">Prepare PW Payroll</a></li>
+            <li><a class="nav-link" href="../payroll/PDSPayroll.html">Prepare PDS Payroll</a></li>
+            <li><a class="nav-link" href="../payroll/ApprovePayroll.html">Approve Payroll</a></li>
+            <li><a class="nav-link" href="../payroll/PrintExportPayroll.html">Print and Export Payroll</a></li>
+            <li><a class="nav-link" href="../payroll/LHTransfer.html">Transfer Payroll</a></li>
+            <li><a class="nav-link" href="../payroll/Reconcilation.html">Payment Reconciliation</a></li>
+            <li><a class="nav-link" href="../payroll/cashAtHand.html">Cash Management</a></li>
+            </ul>
+            </li>
+            <li class="submenu">
+            <a href="#"><i class="fa fa-credit-card bigfonts" aria-hidden="true"></i> <span>GRM</span> <span class="menu-arrow"></span></a>
+            <ul class="list-unstyled">
+            <li><a href="../GRM/ConfigureKAC.html">Configure KAC</a></li>
+            <li><a href="../GRM/CCLocation.html">Configure Complaints</a></li>
+            <li><a href="../GRM/RegisterKAC.html">Register Member</a></li>
+            <li><a href="../GRM/grmauthority.html">Configure GRM Authority</a></li>
+            <li><a href="../GRM/POLocation.html">Configure Position of Member</a></li>
+            <li><a href="../GRM/GRVLocation.html">Grievance Registration</a></li>
+            <li><a href="../GRM/GRV-Location.html">Grievance Resolution</a></li>
+            </ul>
+            </li>
+            <li class="submenu ">
+            <a href="#"><i class="fa fa-rocket bigfonts" aria-hidden="true"></i> <span>Livelihood</span> <span class="menu-arrow"></span></a>
+            <ul class="list-unstyled">
+            <li><a href="../Livelihood/LH_Configure_Pathway_Add.html">Configure Pathway</a></li>
+            <li><a href="../Livelihood/LH_Transfer_View.html">View LH Transfer</a></li>
+            <li> <a href="../Livelihood/LH_Planning_Location.html">LH Planning</a></li>
+            <li><a href="../Livelihood/LH_Pathway_Location.html">LH Activities</a></li>
+            <li><a href="../Livelihood/location.html">LH Prioritization</a></li>
+            <li><a href="../Livelihood/lh-location.html">Approve LH</a></li>
+            <li><a href="../Livelihood/lh-implementation.html">LH Implementation</a></li>
+            
+            
+            </ul>
+            </li>
+            <li class="submenu active">
+            <a class="subdrop" href="#"><i class="fa fa-chain bigfonts" aria-hidden="true"></i> <span class="localize" data-key="">M and E</span> <span class="menu-arrow"></span></a>
+            <ul class="list-unstyled" style="display: block">
+            <li class="active"><a  class="nav-link"  href="me-Configure-indicatorAddRoot.html">Configure Indicators</a></li>
+            <li><a class="nav-link"  href="me-target-annual.html">Target Indicators</a></li>
+            <li><a  class="nav-link"  href="me-report.html">Reports</a></li>
+            <li><a  class="nav-link"  href="me-ScoreCard.html">Score Card</a></li>
+            </ul>
+            </li>
+            <li class="submenu">
+            <a href="#">
+            <i class="fa fa-users bigfonts" aria-hidden="true"></i> <span>User Account</span> <span class="menu-arrow"></span>
+            </a>
+            <ul class="list-unstyled">
+            <!-- <li><a href="Identity/Users/UsersList">User Account</a></li> -->
+            </ul>
+            </li>
+            <li class="submenu">
+            <a href="#"><i class="fa fa-pie-chart bigfonts" aria-hidden="true"></i> <span>Reports</span> <span class="menu-arrow"></span></a>
+            <ul class="list-unstyled">
+            <!-- <li><a class="nav-link" href="Report/TDSTransitionReport/GetReportLocations">Public WorkReport</a></li>
+            <li><a class="nav-link" href="Report/TDSTransitionReport/GetReportLocations?ActionType=TDSReport">HouseholdReport</a></li>
+            <li><a class="nav-link" href="Report/TDSTransitionReport/GetReportLocations?ActionType=TDSReport">TransferReport</a></li>
+            <li><a class="nav-link" href="Report/TDSTransitionReport/GetReportLocations?ActionType=TDSReport">AuditReport</a></li> -->
+            </ul>
+            </li>
+            
+            <li class="submenu">
+            <a href="#"><i class="fa fa-cogs bigfonts"></i> <span> Maintainance </span> <span class="menu-arrow"></span></a>
+            <ul class="list-unstyled">
+            <li><a href="../Maintainance/maintainance-psnp.html">Configure PSNP</a></li>
+            <li><a href="../Maintainance/maintainance-region.html">Configure Region</a></li>
+            <li><a href="../Maintainance/maintainance-zone.html">Configure Zone</a></li>
+            <li><a href="../Maintainance/maintainance-woreda.html">Configure Woreda</a></li>
+            <li><a href="../Maintainance/maintainance-kebele.html">Configure Kebele</a></li>
+            <li><a href="../Maintainance/maintainance-community.html">Configure Community</a></li>
+            <li><a href="../Maintainance/maintainance-targeting-woreda.html">Configure Target Woredas</a></li>
+            <li><a href="../Maintainance/maintainance-martial-status.html">Configure Marital Status</a></li>
+            <li><a href="../Maintainance/configure-activities.html">Configure Activities</a></li>
+            <li><a href="../Maintainance/maintainance-transfer-type.html">Configure Transfer Type</a></li>
+            <li><a href="../Maintainance/maintainance-tds-type.html">Configure Tds Type</a></li>
+            <li><a href="../Maintainance/maintainance-attendance-type.html">Configure Attendance Type</a></li>
+            <li><a href="../Maintainance/maintainance-designation.html">Configure Designation</a></li>
+            <li><a href="../Maintainance/maintainance-wealth-ranking.html">Configure Wealth Ranking</a></li>
+            <!-- <li><a href="maintainance-woreda-client.html">Configure Clients for Woreda</a></li> -->
+            <li><a href="../Maintainance/maintainance-health-status.html">Configure Health Status</a></li>
+            <li><a href="../Maintainance/maintainance-maternal-condition.html">Configure Maternal cond.</a></li>
+            <li><a href="../Maintainance/maintainance-land-measurement.html">Configure Land Measeurment</a></li>
+            <li><a href="../Maintainance/maintainance-land-status.html">Configure Land Status</a></li>
+            <li><a href="../Maintainance/maintainance-livestokes.html">Configure Livestokes</a></li>
+            <li><a href="../Maintainance/maintainance-relationship.html">Configure Relationship Types</a></li>
+            <li><a href="../Maintainance/configure-project.html">Configure Project</a></li>
+            <li><a href="../Maintainance/configure-sub-project.html">Configure Sub-project</a></li>
+            <li><a href="../Maintainance/configure-units.html">Configure Units</a></li>
+            <li><a href="#">Configure worknorms</a></li>
+            <li><a href="../Maintainance/configure-quaters.html">Configure Quaters</a></li>
+            <li><a href="../Maintainance/configure-activities.html">Configure Activities</a></li>
+            
+            </ul>
+            </li>
+            <li class="submenu">
+            <a href="#"><i class="fa fa-gear bigfonts" aria-hidden="true"></i> <span class="localize" data-key=""> Settings and Configuration </span> <span class="menu-arrow"></span></a>
+            <ul class="list-unstyled">
+            <!-- <li><a class="nav-link localize" data-key="" href="/Settings/Settings/GetSettings">Settings</a> </li>
+            <li><a href="SystemMaintenance/Periods/GetPeriods">Configure Period</a></li> -->
+            </ul>
+            </li>
+            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Sidebar -->
+
+                
+<div class="content-page">
+
+
+    <!-- Start content -->
+    <div class="content">
+
+        <div class="container-fluid">
+
+
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="breadcrumb-holder">
+                        <h1 class="main-title float-left"> Configure Indicator </h1>
+                        <ol class="breadcrumb float-right">
+                            <li class="breadcrumb-item">M & E</li>
+                            <li class="breadcrumb-item active">Add</li>
+                        </ol>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- end row -->
+            <div class="row">
+
+                <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 tab-custom">
+                    <ul class="nav nav-tabs">
+
+                        <li class="nav-item">
+                            <a class="nav-link active" href="me-Configure-indicatorAddRoot.html">Add/Edit</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="me-Configure-indicatorView.html">View</a>
+                        </li>
+
+                    </ul>
+                    <div class="card mb-3">
+                        <form data-parsley-validate novalidate method="post" enctype="multipart/form-data" action="#">
+                            <input type="hidden" value="0" data-val="true" data-val-required="The Id field is required." id="Command_Id" name="Command.Id" />
+                            <div class="card-body">
+                                <div class="form-group row">
+
+
+                                </div>
+                                <div class="form-group row">
+                                    <label for="IndicatorTypeId" class="col-sm-3 col-form-label">Type: <span class="text-danger">*</span></label>
+                                    <div class="col-sm-3">
+                                        <select class="custom-select mr-sm-2" id="IndicatorTypeId" data-val="true" data-val-required="The IndicatorTypeId field is required." name="Command.IndicatorTypeId">
+                                        <option value="1">Root</option>
+</select>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="IndicatorName_Eng" class="col-sm-3 col-form-label">Indicator Name Eng: <span class="text-danger">*</span></label>
+                                    <div class="col-sm-3">
+                                        <input type="text" class="form-control" id="IndicatorName_Eng" value="" name="Command.IndicatorName_Eng">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="IndicatorName_Amh" class="col-sm-3 col-form-label">አመላካች ስም: </label>
+                                    <div class="col-sm-3">
+                                        <input type="text" class="form-control" id="IndicatorName_Amh" value="" name="Command.IndicatorName_Amh">
+                                    </div>
+                                </div>
+
+                                <div class="form-group row leaf">
+                                    <label for="UnitOfMeasureId" class="col-sm-3 col-form-label">Unit Of Measure: <span class="text-danger">*</span></label>
+                                    <div class="col-sm-3">
+                                        <select class="custom-select mr-sm-2" id="UnitOfMeasureId" name="Command.IndicatorUnitOfMeasure">
+
+                                        <option value="PERCENTAGE">Percentage</option>
+<option value="NUMBER">Number</option>
+</select>
+
+                                    </div>
+
+                                </div>
+                                <div class="form-group row leaf">
+                                    <label for="frequency" class="col-sm-3 col-form-label">Frequency: <span class="text-danger">*</span></label>
+                                    <div class="col-sm-3">
+                                        <select class="custom-select mr-sm-2" id="frequency" name="Command.Frequency">
+                                            <option selected="">Choose...</option>
+
+                                        <option value="MONTHLY">Monthly</option>
+<option value="QUARTERLY">Quarterly</option>
+<option value="BIANNUALLY">Biannually</option>
+<option value="ANNUALLY">Annually</option>
+<option value="EVERY_TWO_YEARS">Every Two Years</option>
+</select>
+
+                                    </div>
+                                </div>
+
+                                <div class="form-group row leaf">
+                                    <label for="AdminLocationTypeId" class="col-sm-3 col-form-label"> Admin Level: <span class="text-danger">*</span></label>
+                                    <div class="col-sm-3">
+                                        <select class="custom-select mr-sm-2" id="AdminLocationTypeId" name="Command.AdminLocationTypeId">
+                                            <option selected="">Choose...</option>
+
+                                        <option value="REGION">Region</option>
+<option value="ZONE">Zone</option>
+<option value="WOREDA">Woreda</option>
+<option value="KEBELE">Kebele</option>
+<option value="COMMUNITY">Community</option>
+</select>
+
+                                    </div>
+
+                                </div>
+                                <div class="form-group row leaf">
+                                    <label for="CollectionMethodId" class="col-sm-3 col-form-label"> Collection method: <span class="text-danger">*</span></label>
+                                    <div class="col-sm-3">
+                                        <select class="custom-select mr-sm-2" id="CollectionMethodId" name="Command.CollectionMethod">
+                                        <option value="MIS">Mis</option>
+<option value="SURVEY">Survey</option>
+</select>
+                                    </div>
+                                    <div class="col-sm-1">
+                                    </div>
+                                    <div id="add-contact"></div>
+                                </div>
+                                <div class="form-group row leaf">
+                                    <label for="ResponsibleBodyId" class="col-sm-3 col-form-label"> Responsible body: <span class="text-danger">*</span></label>
+                                    <div class="col-sm-3">
+                                        <select class="custom-select mr-sm-2" id="ResponsibleBodyId" name="Command.ResponsibleBody">
+                                            <option selected="">Choose...</option>
+
+                                        <option value="DRMCO">Drmco</option>
+<option value="FSCD">Fscd</option>
+<option value="FSCD_or_MOLSA">Fscd Or Molsa</option>
+<option value="MOLSA">Molsa</option>
+</select>
+
+                                    </div>
+
+                                </div>
+                                <div class="form-group row leaf">
+                                    <label for="ReferredModule" class="col-sm-3 col-form-label"> Referred module: <span class="text-danger">*</span></label>
+                                    <div class="col-sm-3">
+                                        <select class="custom-select mr-sm-2" id="ReferredModule" name="Command.ReferredModules">
+                                            <option selected="">Choose...</option>
+
+                                        <option value="BUDGETING">Budgeting</option>
+<option value="CAPACITY_DEVELOPMENT">Capacity Development</option>
+<option value="DIRECT_SUPPORT">Direct Support</option>
+<option value="GRADUATION">Graduation</option>
+<option value="GRM">Grm</option>
+<option value="MONITORING">Monitoring</option>
+<option value="PUBLIC_WORK">Public Work</option>
+<option value="TARGETING">Targeting</option>
+<option value="REGISTRATION">Registration</option>
+</select>
+
+                                    </div>
+
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-sm-12">
+
+                                        <div id="modal-placeholder"></div>
+
+                                        <!-- Button trigger modal -->
+
+
+
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <div class="col-sm-12">
+
+                                        <input type="submit" value="Submit" class="btn btn-info">
+                                        <input type="submit" value="Cancel" class="btn btn-danger">
+
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        <input name="__RequestVerificationToken" type="hidden" value="CfDJ8HfqWLKQCMFOhdNWmWergeY-gnue1T-3GL0YPGxCorVxn4Ymy2vR0kaw7e3evtxtE6tYDyHVwAvYrQUQlp7p1Z9guXNbdrI9srysQQriv8PyWfEY_S8rfGIAGibR3x10p9dJwiOOgXNvp7itKLuCXrdDCZeZOa4vCsZs7iGjNwQtEUv2ALRGubvxqYQWuZFJOQ" /></form>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+            </div>
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            <p>  <a href="/Home/Privacy">Privacy</a>   &copy;  Copyright 2019 MoLSA, Ministry of Agriculture(MoA), All rights reserved.</p>
+        </div>
+    </footer>
+    
+
+        <script src="../assets/js/jquery-1.10.2.min.js"></script>
+        <script src="../assets/js/modernizr.min.js"></script>
+        <script src="../assets/js/jquery.min.js"></script>
+        <script src="../assets/js/moment.min.js"></script>
+        <script src="../assets/js/jquery-ui.min.js"></script>
+        <script src="../assets/js/popper.min.js"></script>
+        <script src="../assets/js/bootstrap.min.js"></script>
+        <script src="../assets/js/jquery.validate.min.js"></script>
+        <script src="../assets/js/detect.js"></script>
+        <script src="../assets/js/fastclick.js"></script>
+        <script src="../assets/js/jquery.blockUI.js"></script>
+        <script src="../assets/js/jquery.nicescroll.js"></script>
+        <script src="../assets/js/bootstrap-datepicker.min.js"></script>
+        <!-- App js -->
+        <script src="../assets/js/pikeadmin.js"></script>
+        <!-- BEGIN Java Script for this page -->
+        <script src="../assets/js/Chart.min.js"></script>>
+        <script src="../assets/js/highcharts.js"></script>
+        <!-- Counter-Up-->
+        <script src="../assets/plugins1/waypoints/lib/jquery.waypoints.min.js"></script>
+        <script src="../assets/plugins1/counterup/jquery.counterup.min.js"></script>
+
+        <script src="https://canvasjs.com/../assets/script/canvasjs.min.js"></script>
+        <script src="https://swisnl.github.io/jQuery-contextMenu/dist/jquery.contextMenu.min.js"></script>
+
+        <script>
+            $(document).ready(function () {
+                // data-tables
+                //$('#example1').DataTable();
+
+                //var chart = Highcharts.chart('export', {
+
+                //    title: {
+                //        text: ''
+                //    },
+
+                //    subtitle: {
+                //        text: ''
+                //    },
+
+                //    xAxis: {
+                //        categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+                //    },
+
+                //    series: [{
+                //        type: 'column',
+                //        colorByPoint: true,
+                //        data: [29.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4, 194.1, 95.6, 54.4],
+                //        showInLegend: false
+                //    }]
+
+                //});
+
+
+
+                //Highcharts.chart('Registration', {
+                //    chart: {
+                //        type: 'areaspline'
+                //    },
+                //    title: {
+                //        text: ''
+                //    },
+                //    legend: {
+                //        layout: 'vertical',
+                //        align: 'left',
+                //        verticalAlign: 'top',
+                //        x: 150,
+                //        y: 100,
+                //        floating: true,
+                //        borderWidth: 1,
+                //        backgroundColor: (Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF'
+                //    },
+                //    xAxis: {
+                //        categories: [
+                //            'Jan',
+                //            'Feb',
+                //            'Mar',
+                //            'April',
+                //            'May',
+                //            'Jun',
+                //            'July',
+                //            'Aug',
+                //            'Sep',
+                //            'Oct',
+                //            'Nov',
+                //            'Dec'
+
+                //        ],
+                //        plotBands: [{ // visualize the weekend
+                //            from: 4.5,
+                //            to: 6.5,
+                //            color: 'rgba(68, 170, 213, .2)'
+                //        }]
+                //    },
+                //    yAxis: {
+                //        title: {
+                //            text: ''
+                //        }
+                //    },
+                //    tooltip: {
+                //        shared: true,
+                //        valueSuffix: ' units'
+                //    },
+                //    credits: {
+                //        enabled: false
+                //    },
+                //    plotOptions: {
+                //        areaspline: {
+                //            fillOpacity: 0.5
+                //        }
+                //    },
+                //    series: [{
+                //        name: 'Data Set1',
+                //        data: [3, 4, 3, 5, 4, 10, 12, 1, 3, 4, 3, 3]
+                //    }, {
+                //        name: 'Data Set2',
+                //        data: [1, 3, 4, 3, 3, 5, 4, 3, 4, 3, 5, 4]
+                //    }]
+                });
+
+        </script>
+
+
+                <script src="../assets/js/canvasjs.min.js"></script>
+
+        <script>
+            $(document).ready(function () {
+                //$('#example1').DataTable();
+                $('.datepicker').datepicker({
+                    format: "dd-M-yyyy",
+                    todayBtn: "linked",
+                    autoclose: true,
+                    todayHighlight: true
+                });
+
+            });
+        </script>
+
+        <script>
+                                                var currentdate = new Date();
+                                                var weekday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+                                                var month = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+                                                var hours = currentdate.getHours();
+                                                var minutes = currentdate.getMinutes();
+                                                var ampm = hours >= 12 ? 'PM' : 'AM';
+                                                hours = hours % 12;
+                                                hours = hours ? hours : 12; // the hour '0' should be '12'
+                                                minutes = minutes < 10 ? '0' + minutes : minutes;
+var strTime = hours + ':' + minutes + ' ' + ampm;
+
+
+var datetime = strTime + ", "
+                + weekday[currentdate.getDay()] + ", "
+                + month[currentdate.getMonth()] + " "
+                + currentdate.getDate() + ", "
+                //+ (currentdate.getMonth()+1)  + "/"
+                + currentdate.getFullYear() + " "
+
+                                                //+ currentdate.getFullYear() + " </br> "
+                    // + currentdate.getHours() + ":"
+                    // + currentdate.getMinutes() + " "
+                    // + currentdate.getSeconds();
+                    document.getElementById("cdateTime").innerHTML = datetime;
+
+                    //tree view location details script
+                    $(document).ready(function () {
+                        $.fn.extend({
+                            treed: function (o) {
+
+                                var openedClass = 'fa fa-minus';
+                                var closedClass = 'fa fa-plus';
+
+                                if (typeof o != 'undefined') {
+                                    if (typeof o.openedClass != 'undefined') {
+                                        openedClass = o.openedClass;
+                                    }
+                                    if (typeof o.closedClass != 'undefined') {
+                                        closedClass = o.closedClass;
+                                    }
+                                }
+                                ;
+                                //initialize each of the top levels
+                                var tree = $(this);
+                                tree.addClass("tree");
+                                tree.find('li').has("ul").each(function () {
+                                    var branch = $(this); //li with children ul
+                                    branch.prepend("<i class='indicator glyphicon " + closedClass + "'></i>");
+                                    branch.addClass('branch');
+                                    branch.on('click', function (e) {
+                                        if (this == e.target) {
+                                            var icon = $(this).children('i:first');
+                                            icon.toggleClass(openedClass + " " + closedClass);
+                                            $(this).children().children().toggle();
+                                        }
+                                    })
+                                    branch.children().children().toggle();
+                                });
+                                //fire event from the dynamically added icon
+                                tree.find('.branch .indicator').each(function () {
+                                    $(this).on('click', function () {
+                                        $(this).closest('li').click();
+                                    });
+                                });
+                                //fire event to open branch if the li contains an anchor instead of text
+                                tree.find('.branch>a').each(function () {
+                                    $(this).on('click', function (e) {
+                                        $(this).closest('li').click();
+                                        e.preventDefault();
+                                    });
+                                });
+                                //fire event to open branch if the li contains a button instead of text
+                                tree.find('.branch>button').each(function () {
+                                    $(this).on('click', function (e) {
+                                        $(this).closest('li').click();
+                                        e.preventDefault();
+                                    });
+                                });
+                            }
+                        });
+
+                        //Initialization of treeviews
+
+                        $('#tree1').treed();
+
+                        $('#tree2').treed({ openedClass: 'glyphicon-folder-open', closedClass: 'glyphicon-folder-close' });
+
+                        $('#tree3').treed({ openedClass: 'glyphicon-chevron-right', closedClass: 'glyphicon-chevron-down' });
+
+                    });
+                    // END CODE FOR BASIC DATA TABLE
+
+        </script>
+        <script>
+            $('#txtLevelEngSearch').keyup(function () {
+                var filter_text = $(this).val();
+                // If user input is not null
+                if (filter_text) {
+                    // Iterate through all branches
+                    $('.tree-li-ul').each(function () {
+                        // Initiate match flag to false for this branch
+                        var match_flag = false
+                        // Iterate through all items within one branch
+                        $(this).children().each(function () {
+                            // If user input matches this item
+                            if ($(this).children().text().toLowerCase().indexOf(filter_text) >= 0) {
+                                // Set match_flag for this branch to true
+                                match_flag = true;
+                                // Expand this branch
+                                $(this).parent().addClass('tree-open');
+                                // Show this item
+                                $(this).slideDown();
+                            }
+                            // If user input doesn't match this item
+                            else {
+                                // Hide this item
+                                $(this).slideUp();
+                                // If user input doesn't match any item in this branch, collapse this branch
+                                if (!match_flag) $(this).parent().parent().removeClass('tree-open');
+                            }
+                        });
+                    });
+
+                }
+                // If user input is null
+                else {
+                    // Hide all the branches
+                    $('.tree-li-ul').removeClass('tree-open');
+                    // Show all items
+                    $('.tree-li-ul-li').slideDown();
+                }
+            });
+        </script>
+        <!-- END Java Script for this page -->
+    
+    
+    <script src="../assets/js/site.js?v=4q1jwFhaPaZgr8WAUSrux6hAuh0XDg9kPS3xIVq36I0"></script>
+
+
+    <script>
+                // localization script
+                // Usage: requires class="localize" and data-key=
+                // Resharper creates and error on GetLocal but it is ok.
+
+    </script>
+    
+    <script type="text/javascript">
+    window.onload = function() {
+
+        $("#tblReferal").css("display", "none");
+    };
+
+
+    function addRowReferal() {
+
+        AddRowReferal();
+        $("#tblReferal").css("display", "block");
+
+        // AddRow($("#trainingType :selected").text());
+        // $("#tblTraining").css("display", "block");
+    }
+
+    function AddRowReferal() {
+        var tBody = $("#tblReferal > TBODY")[0];
+
+        row = tBody.insertRow(-1);
+        var cell = $(row.insertCell(-1));
+        cell.html();
+
+        cell = $(row.insertCell(-1));
+        var txtDate = $("<input type='text' class='form-control'>");
+        cell.html(txtDate);
+
+        cell = $(row.insertCell(-1));
+        var txtInstitution = $("<input type='text' class='form-control'>");
+        cell.html(txtInstitution);
+
+        cell = $(row.insertCell(-1));
+        var btnRemove = $("<input />");
+        btnRemove.attr("type", "button");
+        btnRemove.attr("onclick", "RemoveRef(this);");
+        btnRemove.attr("class", "btn btn-danger btn-sm");
+        btnRemove.val("Remove");
+        cell.append(btnRemove);
+    };
+
+    function RemoveRef(button) {
+
+        var row = $(button).closest("TR");
+        if (confirm("Do you want to delete")) {
+            var table = $("#tblReferal")[0];
+            table.deleteRow(row[0].rowIndex);
+        }
+    };
+
+    $(function() {
+        $('#openDialog').click(function(event) {
+            var url = $(this).data('url');
+            $.get(url).done(function(data) {
+                $('#modal-placeholder').html(data);
+
+                $('#modal-placeholder > .modal').modal('show');
+
+            });
+        });
+    });
+
+    function showHideBuild() {
+        var isLeaf = ($('#IndicatorTypeId').val() == 4);
+        var isMIS = ($('#CollectionMethodId').val() == 1);
+        if (isLeaf && isMIS) {
+            $('#openDialog').removeClass("collapse");
+        } else {
+            $('#openDialog').addClass("collapse");
+        }
+    }
+    function deleteAttribute(attributeId, indicatorId) {
+        if (!confirm("Do you want to delete")) {
+            alert('do not delete');
+            return;
+        }
+        var url = "/ME/DeleteAttribute";
+        $.post(url,
+            { attributeId, indicatorId },
+            function(data) {
+                loadTable(data, indicatorId);
+                alert("Data Deleted Successfully");
+            });
+    }
+       
+    function editAttribute(attributeId, indicatorId) {
+        var url = "/ME/EditAttribute";
+        $.getJSON(url,
+            { attributeId, indicatorId },
+            function(data) {
+                $('#id').val(data.id);
+                $('#indicatorId').val(data.indicatorId);
+                $('#dataAttribute').val(data.attributeName);
+                $('#isNumerator').prop('checked', data.isNumerator);
+                if (data.indicatorSourceTableId > 0) {
+                    $('#SourceId').val(data.indicatorSourceTableId);
+                    sourceChanged();
+                    $('#SummaryTypeId').val(data.summaryOperation);
+                    $('#SummaryFieldId').val(data.fieldId);
+                    console.log(data.filterStringDisplay, data.filterStringValue);
+                    $('#filterStringDiv').text(data.filterStringDisplay);
+                    $('#filterStringValue').val(data.filterStringValue);
+                }
+            });
+    }
+
+    function sourceChanged() {
+        var url = "/ME/GetFieldList";
+        var ddlSource = "#SourceId";
+        var srcVal = $(ddlSource).val();
+        $('#SummaryFieldId').empty();
+        $('#StaticFilter').empty();
+         $.getJSON(url,
+            { sourceId: srcVal },
+            function(data) {
+                var summaryItems = "";
+                var filterItems = "";
+
+                summaryItems = '<option value="0">  </option>';
+                filterItems = '<option value="0">  </option>';
+                $.each(data,
+                    function(i, field) {
+                        if (field['summary'] === true) {
+                            summaryItems += '<option value="' +
+                                field.id +
+                                '">' +
+                                field.localizedValue +
+                                '</option>';
+                        }
+
+                        if (field['filterBy'] === true) {
+                            filterItems += '<option value="' +
+                                field.id +
+                                '">' +
+                                field.localizedValue +
+                                '</option>';
+                        }
+                    });
+                $('#SummaryFieldId').html(summaryItems);
+                $('#StaticFilter').html(filterItems);
+            });
+    }
+
+    function filterChanged() {
+        var url = "/ME/GetFieldValue";
+        var srcVal = $('#StaticFilter').val();
+        var e = $('#filterValue');
+        if (e != undefined) {
+            e.remove();
+        }
+
+        $.getJSON(url,
+            { fieldId: srcVal },
+            function(data) {
+                $('#StaticFilterValue').val(data.fieldName);
+                $('#filterValuediv').append(data.tag);
+            });
+    }
+
+    function addFilterClicked() {
+        var idAndOrDiv = '#divAndOr';
+        var idAndOr = '#idAndOr';
+        var idStaticFilter = '#StaticFilter'; // The filter Field
+        var idOperator = '#idOperation'; // Operator =, >, <, ....
+        var idFilterValue = '#filterValue'; // the input | select tag that contains the filter value
+        var idFilterString = '#filterStringDiv'; // The div that display the filter string
+        var idFilterStringValue = '#filterStringValue'; // Hidden field to contain actual values
+
+
+        var fieldName = $(idStaticFilter + " option:selected").text();
+        var fieldNameValue = $('#StaticFilterValue').val();
+        var andOr = '';
+        if (!$(idAndOrDiv).hasClass('collapse')) {
+            andOr = $(idAndOr + " option:selected").text();
+        }
+        var operator = $(idOperator + " option:selected").text();
+        var value = $(idFilterValue).val();
+
+        var sqlDisplay = andOr + " " + fieldName + " " + operator + " " + value;
+        var sqlValue = andOr + " " + fieldNameValue + " " + operator + " " + value;
+        var prevValue = $(idFilterString).text();
+        sqlValue = $(idFilterStringValue).val() + " " + sqlValue;
+        sqlDisplay = prevValue + " " + sqlDisplay;
+        $(idFilterString).text(sqlDisplay);
+        $(idFilterStringValue).val(sqlValue);
+
+        $(idAndOrDiv).removeClass("collapse");
+    }
+
+    function removeFilterClicked() {
+        $('#divAndOr').addClass("collapse");
+        $('#filterStringDiv').text('');
+        $('#filterStringValue').val('');
+    }
+
+    function saveDataSource() {
+        var url = "/ME/SaveDataSource";
+        var id = $('#id').val();
+        var vname = $('#dataAttribute').val();
+        var isNumerator = $('#isNumerator').prop("checked"); // .is(':checked')
+        var indicatorId = $('#indicatorId').val();
+        var sourceid = $('#SourceId').val();
+        var fieldName = $('#SummaryFieldId').val();
+        var sumTypeId = $('#SummaryTypeId').val();
+        var filterValue = $('#filterStringValue').val();
+        var filterDisplay = $('#filterStringDiv').text();
+        var collectionMethodId = $('#DataSourceCollectionMethodId').val();
+        var data = {
+            id,
+            vname,
+            collectionMethodId,
+            isNumerator,
+            indicatorId,
+            sourceid,
+            fieldName,
+            sumTypeId,
+            filterValue,
+            filterDisplay
+        };
+        $.post(url,
+            data,
+            function(rdata) {
+                if (id > 0) {
+                    alert("Data Updated Successfully");
+                } else {
+                    alert("Data Inserted Successfully");
+                }
+                loadTable(rdata, indicatorId);
+            });
+    }
+
+    function loadTable(data, indicatorId) {
+        $('#datasource-table > tbody > tr').remove();
+        var tbody = $('#datasource-table > tbody');
+
+        data.forEach(function(i) {
+            tbody.append(i.tr);
+        });
+    }
+
+    $('#SourceId').change(function() {
+        sourceChanged();
+    });
+
+    $('#StaticFilter').change(function() {
+        filterChanged();
+    });
+
+    $('#addFilter').click(function() {
+        addFilterClicked();
+    });
+
+    $('#clearFilter').click(function() {
+        removeFilterClicked();
+        });
+    function indicatorTypeChanged() {
+            var srcVal = $('#IndicatorTypeId').val();
+            var isLeaf = (srcVal == 4);
+            var isRoot = (srcVal == 1);
+            var isAggregate = (srcVal == 3);
+            if (isLeaf) {
+                $('.leaf').removeClass("collapse");
+            } else {
+                $('.leaf').addClass("collapse");
+            }
+            $('#UnitOfMeasureId').prop('disabled', !isLeaf);
+            $('#frequency').prop('disabled', !isLeaf);
+            $('#AdminLocationTypeId').prop('disabled', !isLeaf);
+            $('#CollectionMethodId').prop('disabled', !isLeaf);
+
+            $('#ResponsibleBodyId').prop('disabled', !isLeaf);
+            $('#ReferredModule').prop('disabled', !isLeaf);
+        }
+
+    $('#IndicatorTypeId').change(function () {
+        indicatorTypeChanged();
+        showHideBuild();
+        });
+
+    $('#CollectionMethodId').change(function () {
+        showHideBuild();
+    });
+        indicatorTypeChanged();
+//   </script>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,89 @@
+﻿body{font-size:12px}
+#printCard{display: block;text-align: center; font-family: Arial, Helvetica, sans-serif}
+#printCard .prntbtn {
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+    border: 0;
+    padding: 10px 15px;
+    background: #4CAF50;
+    color: #fff;
+	cursor:pointer;
+	transition:.2s;
+}
+#printCard .prntbtn:hover {background: #209625;}
+#printCard .cardFront {
+    width: 500px;
+    height: 300px;
+    border: 1px solid #bbb;
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 5px;
+    position: relative;
+    background-image:url(../img/crdbg.jpg);
+    background-size: 100%;
+    overflow: hidden;
+    background: #e4e4e4;
+}
+#printCard .cardFront{}
+#printCard .cardFront .cfheader{text-align: center;padding: 6px;background: #4980b5;color: #fff;}
+#printCard .cardFront .cfheader h2{display:inline-block;font-size: 20px;color: #fff;margin: 0 5px;}
+#printCard .cardFront .cfheader h2>small{display:block;margin: 0;font-size: 11px;color:#ba292f;}
+#printCard .cardFront .cfheader img{display:inline-block;height: 30px;width: 30px;}
+
+#printCard .cardFront .cfbody{
+    height: auto;
+    padding: 0;
+    text-align: left;
+}
+#printCard .cardFront .cfbody p{margin: 0;font-size: 11px;margin-bottom: 12px;}
+#printCard .cardFront .cfbody p label{
+    font-weight: normal;
+    margin-right: 7px;
+}
+#printCard .cardFront .cfbody p label small{display:block;}
+#printCard .cardFront .cfbody p strong input{
+    position: relative;
+    top: 2px;
+	}
+#printCard .cardFront .cfbody .cfb-left{display: inline-block;vertical-align: middle;width: 45%;background: #eee;float: left;padding: 10px;height: 100%;}
+#printCard .cardFront .cfbody .cfb-right{display: inline-block;vertical-align: middle;width: 45%;background: #eee;float: right;padding: 10px;height: 100%;}
+#printCard .cardFront .cfbody .cfb-left .cfbl-left{display: inline-block;vertical-align: bottom;width: 55%;}
+#printCard .cardFront .cfbody .cfb-left .cfbl-right{display: inline-block;vertical-align: bottom;width: 40%;text-align: right;}
+#printCard .cardFront .cfbody .cfb-left .cfbl-right img{width: 68%;}
+#printCard .cardFront .cfbody .cfb-right .cfb-img{text-align: center;margin-bottom: 35px;}
+#printCard .cardFront .cfbody .cfb-right .cfb-img .img-block{display: inline-block;vertical-align: middle;width: 80px;height: 80px;border: 1px solid #adadad;margin: 0 10px;}
+#printCard .cardFront .cfbody .cfb-right .cfb-img .img-block img{width:100%;margin-bottom: 5px;}
+#printCard .cardFront .cfbody .cfb-right .cfb-img .img-block label small{display: block}
+#printCard .cardFront .cfbody .cfb-right p strong img{width:40%; margin-left:10px}
+#printCard .cardFront .cffooter{
+    background: #262d33;
+    padding: 5px;
+    font-size: 11px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+#printCard .cardFront .cffooter h3{
+    margin: 0;
+    color: #fff;
+    font-weight: 600;
+    font-size: 1.4em;
+}
+#printCard .cardFront .cffooter h3 span{}
+#printCard .cardFront .cffooter h3 strong{}
+#printCard .cardFront .cffooter h4{
+    margin: 0;
+    color: #fff;
+    font-weight: 100;
+    letter-spacing: 1px;
+}
+
+@media print{
+	.noPrint{display:none!important;}
+	#printCard .cardFront {
+    
+    
+	}
+}

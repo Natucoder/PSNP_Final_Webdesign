@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <title>PSNP</title>
+    <meta name="description" content="Free Bootstrap 4 Admin Theme | Pike Admin">
+    <meta name="author" content="Pike Web Development - https://www.pikephp.com">
+    
+        <!-- Favicon -->
+        <link rel="shortcut icon" href="../assets/images/favicon.ico">
+        <!-- Bootstrap CSS -->
+        <link href="../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <!-- Font Awesome CSS -->
+        <link href="../assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+        <!-- Custom CSS -->
+        <link href="../assets/css/style.css" rel="stylesheet" type="text/css" />
+        <!-- BEGIN CSS for this page -->
+
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap4.min.css" />
+        <!-- BEGIN CSS for Context Menu -->
+        <link rel="stylesheet" type="text/css" href="https://swisnl.github.io/jQuery-contextMenu/dist/jquery.contextMenu.min.css" />
+
+        <link href="../assets/css/bootstrap-datepicker.min.css" rel="stylesheet" />
+
+
+
+        <!-- END CSS for this page -->
+        
+
+
+
+    
+</head>
+<body>
+
+    <div>
+        
+
+
+        <main role="main">
+
+            <div id="main">
+                <!-- top bar navigation -->
+                <div class="headerbar">
+                    <!-- LOGO -->
+
+                    <div class="headerbar-left">
+                        <a href="index.html" class="logo">
+                            <img alt="logo" src="../assets/images/llogo.png" />
+                            <span><strong>MIS</strong> </span>
+                        </a>
+                    </div>
+
+                    <nav class="navbar-custom">
+
+                        <ul class="list-inline float-right mb-0">
+                            <li class="list-inline-item dropdown notif">
+                                <div id="cdateTime"></div>
+                            </li>
+                            <li class="list-inline-item dropdown notif">
+                                <a class="nav-link dropdown-toggle arrow-none" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+                                    <i class="fa fa-cog bigfonts"></i><span class=""></span>
+                                </a>
+
+                                <div class="dropdown-menu dropdown-menu-right profile-dropdown">
+                                    <!-- item-->
+                                    <div class="dropdown-item noti-title">
+                                        <h5 class="text-overflow"><small class="localize" data-key="Language Setting">Language Setting</small> </h5>
+                                    </div>
+                                    <!-- item-->
+                                    <a
+                                       class="dropdown-item  notify-item">
+                                        <i class="fa fa-dot-circle-o bigfonts"></i> <span>English</span>
+                                    </a>
+
+                                    <!-- item-->
+                                    <a
+                                       class="dropdown-item active notify-item">
+                                        <i class="fa fa-dot-circle-o bigfonts"></i>
+                                        <span>አማርኛ </span>
+                                    </a>
+                                    
+
+                                    <!-- item-->
+
+
+                                </div>
+                            </li>
+
+
+                            <li class="list-inline-item dropdown notif">
+
+                                <a class="nav-link dropdown-toggle nav-user" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+                                    <img src="../assets/images/avatars/admin.png" alt="Profile image" class="avatar-rounded">
+                                        <span class="profile-name">Hi, <span class="designation">eskindirtkl2@gmail.com</span></span>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-right profile-dropdown">
+                                    
+                                   
+                                    <a class="dropdown-item notify-item" href="../editprofile.html">
+                                        <i class="fa fa-user"></i> <span>Edit Profile</span>
+                                    </a>
+
+                                    <!-- item-->
+                                    <a onclick="return ConfirmAlert('LogOut');" class="dropdown-item notify-item" href="../editprofile.html">
+                                        <i class="fa fa-external-link"></i> <span>LogOut</span>
+                                    </a>
+
+                                </div>
+                            </li>
+
+                        </ul>
+
+                        <ul class="list-inline menu-left mb-0">
+                            <li class="float-left">
+                                <button class="button-menu-mobile open-left">
+                                    <i class="fa fa-fw fa-bars"></i>
+                                </button>
+                            </li>
+                        </ul>
+
+                    </nav>
+
+                </div>
+                <!-- End Navigation -->
+                <!-- Left Sidebar -->
+                <div class="left main-sidebar">
+
+                    <div class="sidebar-inner leftscroll">
+
+                        <div id="sidebar-menu">
+
+                            <ul class="list-unstyled">
+
+                                <li class="submenu">
+                                    <a class="" href="../index.html"><i class="fa fa-fw fa-bars"></i><span> Dashboard </span> </a>
+                                </li>
+                                
+                                <li class="submenu">
+                                        <a><i class="fa fa-id-card bigfonts"></i> <span>Manage Households </span> <span class="menu-arrow"></span></a>
+                                        <ul class="list-unstyled">
+                                                <li> <a class="nav-link " href="../registration/gethouseholds.html">Manage Household Profiles</a></li>
+                                                <li> <a class="nav-link" href="../registration/managehhmemberlist.html">Manage Household Members</a></li>
+                                                <li> <a class="nav-link" href="../registration/managehhlistchardetail.html">Manage Household Characterstics</a></li>
+                                                <li> <a class="nav-link" href="../registration/hhlistassetdetail.html">Record Household Assets</a></li>
+                                            <!-- <li> <a class="nav-link" href="registration/manageassetlossdetaillist.html">Record Household Asset Loss</a></li> -->
+                                            <li> <a class="nav-link" href="../registration/hhfoodgapdetaillist.html">Track Household Food Gap</a></li>
+                                            <li> <a class="nav-link" href="../registration/shockhistorylist.html">Track Household Shock History</a></li>
+                                    
+                                        </ul>
+                                    </li>
+                                    <li class="submenu">
+                                            <a><i class="fa fa-fire" aria-hidden="true"></i> <span> HRD</span> <span class="menu-arrow"></span></a>
+                                            <ul class="list-unstyled">
+                                            <li> <a class="nav-link" href="../HRD/gethouseholds.html">Manage HRD Household Profile</a></li>
+                                            <li>
+                                           <a class="nav-link " href="../HRD/manageassetlossdetaillist.html">Record AssetLoss</a>
+                                            </li>
+                                                                         
+                                            </ul>
+                                           </li>
+<li class="submenu active">
+    <a class="subdrop"><i class="fa fa-graduation-cap"></i> <span> Household Graduation  </span> <span class="menu-arrow"></span></a>
+    <ul class="list-unstyled" style="display: block">
+        <li> <a class="nav-link" href="noticedetaillist.html">Notify Household</a></li>
+        <li class="active">
+            <a class="nav-link" href="householdgradlist.html">HouseholdGraduation</a>
+        </li>
+        <li>
+            <a class="nav-link " href="memberexithhlist.html">Household Members Exit</a>
+        </li>
+
+    </ul>
+</li>
+<li class="submenu">
+    <a href="#"><i class="fa fa-file-o bigfonts"></i> <span> Targeting </span> <span class="menu-arrow"></span></a>
+    <ul class="list-unstyled">
+    <li><a href="../targeting/configure-targetcriteria.html">Configure Target Crieteria</a></li>
+    <li><a href="../targeting/view-targetcriteria.html">View Target With Crieteria</a></li>
+    </ul>
+</li>
+<li class="submenu">
+<a href="#"><i class="fa fa-book bigfonts"></i> <span> Enrollment </span> <span class="menu-arrow"></span></a>
+<ul class="list-unstyled">
+    <li><a href="../enrollment/location.html">Verify</a></li>
+    
+</ul>
+</li>
+<li class="submenu">
+    <a href="#"><i class="fa fa-flash bigfonts"></i> <span> Planning </span> <span class="menu-arrow"></span></a>
+   <ul class="list-unstyled">
+        <li><a href="../Planning/pw-activities-planing.html">PW Activities Planning</a></li>
+        <li><a href="../Planning/sub-project-budget-planing.html">Sub-Project Budget Planning</a></li>
+        <li><a href="../Planning/config-woreda-client.html">Configure Clients for Woreda</a></li>
+        <li><a href="../Livelihood/LH_Planning_Location.html">LH Planning</a></li>
+    </ul>
+</li>
+
+<li class="submenu">
+    <a href="#"><i class="fa fa-eercast bigfonts"></i> <span class="localize" data-key=""> Public Work </span> <span class="menu-arrow"></span></a>
+    <ul class="list-unstyled">
+
+
+        <li><a class="nav-link" href="../PublicWork/Pw-Schedule.html">Configure PW Schedule</a></li>
+        <li><a class="nav-link" href="../PublicWork/Getprogrampaymentitemlocation.html">Program Payment Item</a></li>
+        <li><a class="nav-link" href="../PublicWork/Configurewage-Rate.html">Configure PW Wage Rate</a></li>
+        <li><a href="../PublicWork/configurepdcalculation.html">Person Days (PD) Estimates</a></li>
+        <!-- <li><a class="nav-link" href="Common/GenericLocationView/GetLocationPopUp?ActionType=TDStransitions">TDS Transition</a></li> -->
+        <li><a href="../PublicWork/socialservicelocation.html">Link To SocialServices</a></li>
+        <li><a class="nav-link" href="../PublicWork/transitionlocation.html">PW Transition</a></li>
+        <li><a class="nav-link" href="../PublicWork/Attendancelocation.html">Print Attendance</a></li>
+        <!-- <li><a class="nav-link active" href="/PublicWork/PWAttendances/GetPWAttendanceLocations">Record Attendance</a></li> -->
+        <li><a class="nav-link" href="../PublicWork/period-location.html">Configure Period Closing</a></li>
+    </ul>
+</li>
+<li class="submenu">
+        <a href="#"><i class="fa fa-object-group" aria-hidden="true"></i> <span class="localize" data-key=""> Permanent Direct Support </span> <span class="menu-arrow"></span></a>
+        <ul class="list-unstyled">
+          <li><a class="nav-link localize" data-key="" href="../pds/pdsscheduleloc.html">Payment Schedule</a> </li>
+          <li><a class="nav-link localize" data-key="" href="../pds/socialserviceprovidersloc.html">Social Service Providers</a> </li>
+          <li><a class="nav-link localize" data-key="" href="../pds/pdslocation.html">Link to Social Service</a> </li>
+          <li><a class="nav-link localize" data-key="" href="../pds/locationdisability.html">Permanent Direct Support Disability</a> </li>
+          </ul>
+        </li>
+
+    <li class="submenu">
+        <a href="#"><i class="fa fa-usd bigfonts" aria-hidden="true"></i> <span> Budget </span> <span class="menu-arrow"></span></a>
+        <ul class="list-unstyled">
+             <li><a href="../Budget/BudgetType.html">Configure Budget Type</a></li>
+            <li><a href="../Budget/budgetCeiling.html">Budget Ceiling</a></li>
+            <li><a href="../Budget/BLocation.html">Budget Planning</a></li>
+            <li><a href="../Budget/BudgetAppr.html">Budget Approval</a></li>
+            <li><a href="../Budget/Cashflow.html">Cashflow Forcasting</a></li>
+            <li><a href="../Budget/location.html">Budget Reconcilation</a></li>
+            
+        </ul>
+    </li>
+
+<li class="submenu">
+        <a href="#"><i class="fa fa-paypal bigfonts" aria-hidden="true"></i> <span>Transfer</span> <span class="menu-arrow"></span></a>
+        <ul class="list-unstyled">
+            <li><a class="nav-link " href="../payroll/PWClient.html">Prepare PW Payroll</a></li>
+            <li><a class="nav-link" href="../payroll/PDSPayroll.html">Prepare PDS Payroll</a></li>
+            <li><a class="nav-link" href="../payroll/ApprovePayroll.html">Approve Payroll</a></li>
+            <li><a class="nav-link" href="../payroll/PrintExportPayroll.html">Print and Export Payroll</a></li>
+            <li><a class="nav-link" href="../payroll/LHTransfer.html">Transfer Payroll</a></li>
+            <li><a class="nav-link" href="../payroll/Reconcilation.html">Payment Reconciliation</a></li>
+            <li><a class="nav-link" href="../payroll/cashAtHand.html">Cash Management</a></li>
+        </ul>
+    </li>
+    <li class="submenu">
+        <a href="#"><i class="fa fa-credit-card bigfonts" aria-hidden="true"></i> <span>GRM</span> <span class="menu-arrow"></span></a>
+        <ul class="list-unstyled">
+            <li><a href="../GRM/ConfigureKAC.html">Configure KAC</a></li>
+            <li><a href="../GRM/CCLocation.html">Configure Complaints</a></li>
+            <li><a href="../GRM/RegisterKAC.html">Register Member</a></li>
+            <li><a href="../GRM/grmauthority.html">Configure GRM Authority</a></li>
+            <li><a href="../GRM/POLocation.html">Configure Position of Member</a></li>
+            <li><a href="../GRM/GRVLocation.html">Grievance Registration</a></li>
+            <li><a href="../GRM/GRV-Location.html">Grievance Resolution</a></li>
+        </ul>
+    </li>
+    <li class="submenu">
+        <a href="#"><i class="fa fa-rocket bigfonts" aria-hidden="true"></i> <span>Livelihood</span> <span class="menu-arrow"></span></a>
+        <ul class="list-unstyled">
+            <li><a href="../Livelihood/LH_Configure_Pathway_Add.html">Configure Pathway</a></li>
+            <li><a href="../Livelihood/LH_Transfer_View.html">View LH Transfer</a></li>
+            <li><a href="../Livelihood/LH_Planning_Location.html">LH Planning</a></li>
+            <li><a href="../Livelihood/LH_Pathway_Location.html">LH Activities</a></li>
+            <li><a href="../Livelihood/location.html">LH Prioritization</a></li>
+            <li><a href="../Livelihood/lh-location.html">Approve LH</a></li>
+            <li><a href="../Livelihood/lh-implementation.html">LH Implementation</a></li>
+        
+        
+        </ul>
+    </li>
+<li class="submenu ">
+        <a href="#"><i class="fa fa-chain bigfonts" aria-hidden="true"></i> <span class="localize" data-key="">M and E</span> <span class="menu-arrow"></span></a>
+        <ul class="list-unstyled">
+          <li><a  class="nav-link"  href="../ME/me-Configure-indicatorAddRoot.html">Configure Indicators</a></li>
+            <li><a class="nav-link"  href="../ME/me-target-annual.html">Target Indicators</a></li>
+            <li><a  class="nav-link"  href="../ME/me-report.html">Reports</a></li>
+            <li><a  class="nav-link"  href="../ME/me-ScoreCard.html">Score Card</a></li>
+        </ul>
+    </li>
+<li class="submenu">
+    <a href="#">
+        <i class="fa fa-users bigfonts" aria-hidden="true"></i> <span>User Account</span> <span class="menu-arrow"></span>
+    </a>
+    <ul class="list-unstyled">
+        <!-- <li><a href="Identity/Users/UsersList">User Account</a></li> -->
+    </ul>
+</li>
+<li class="submenu">
+    <a href="#"><i class="fa fa-pie-chart bigfonts" aria-hidden="true"></i> <span>Reports</span> <span class="menu-arrow"></span></a>
+    <ul class="list-unstyled">
+        <!-- <li><a class="nav-link" href="Report/TDSTransitionReport/GetReportLocations">Public WorkReport</a></li>
+        <li><a class="nav-link" href="Report/TDSTransitionReport/GetReportLocations?ActionType=TDSReport">HouseholdReport</a></li>
+        <li><a class="nav-link" href="Report/TDSTransitionReport/GetReportLocations?ActionType=TDSReport">TransferReport</a></li>
+        <li><a class="nav-link" href="Report/TDSTransitionReport/GetReportLocations?ActionType=TDSReport">AuditReport</a></li> -->
+    </ul>
+</li>
+
+<li class="submenu">
+    <a href="#"><i class="fa fa-cogs bigfonts"></i> <span> Maintainance </span> <span class="menu-arrow"></span></a>
+    <ul class="list-unstyled">
+        <li><a href="../Maintainance/maintainance-psnp.html">Configure PSNP</a></li>
+        <li><a href="../Maintainance/maintainance-region.html">Configure Region</a></li>
+        <li><a href="../Maintainance/maintainance-zone.html">Configure Zone</a></li>
+        <li><a href="../Maintainance/maintainance-woreda.html">Configure Woreda</a></li>
+        <li><a href="../Maintainance/maintainance-kebele.html">Configure Kebele</a></li>
+        <li><a href="../Maintainance/maintainance-community.html">Configure Community</a></li>
+        <li><a href="../Maintainance/maintainance-targeting-woreda.html">Configure Target Woredas</a></li>
+        <li><a href="../Maintainance/maintainance-martial-status.html">Configure Marital Status</a></li>
+        <li><a href="../Maintainance/configure-activities.html">Configure Activities</a></li>
+        <li><a href="../Maintainance/maintainance-transfer-type.html">Configure Transfer Type</a></li>
+        <li><a href="../Maintainance/maintainance-tds-type.html">Configure Tds Type</a></li>
+        <li><a href="../Maintainance/maintainance-attendance-type.html">Configure Attendance Type</a></li>
+        <li><a href="../Maintainance/maintainance-designation.html">Configure Designation</a></li>
+        <li><a href="../Maintainance/maintainance-wealth-ranking.html">Configure Wealth Ranking</a></li>
+        <!-- <li><a href="maintainance-woreda-client.html">Configure Clients for Woreda</a></li> -->
+        <li><a href="../Maintainance/maintainance-health-status.html">Configure Health Status</a></li>
+        <li><a href="../Maintainance/maintainance-maternal-condition.html">Configure Maternal cond.</a></li>
+        <li><a href="../Maintainance/maintainance-land-measurement.html">Configure Land Measeurment</a></li>
+        <li><a href="../Maintainance/maintainance-land-status.html">Configure Land Status</a></li>
+        <li><a href="../Maintainance/maintainance-livestokes.html">Configure Livestokes</a></li>
+        <li><a href="../Maintainance/maintainance-relationship.html">Configure Relationship Types</a></li>
+        <li><a href="../Maintainance/configure-project.html">Configure Project</a></li>
+        <li><a href="../Maintainance/configure-sub-project.html">Configure Sub-project</a></li>
+        <li><a href="../Maintainance/configure-units.html">Configure Units</a></li>
+        <li><a href="#">Configure worknorms</a></li>
+        <li><a href="../Maintainance/configure-quaters.html">Configure Quaters</a></li>
+        <li><a href="../Maintainance/configure-activities.html">Configure Activities</a></li>
+         
+    </ul>
+</li>
+<li class="submenu">
+    <a href="#"><i class="fa fa-gear bigfonts" aria-hidden="true"></i> <span class="localize" data-key=""> Settings and Configuration </span> <span class="menu-arrow"></span></a>
+    <ul class="list-unstyled">
+        <!-- <li><a class="nav-link localize" data-key="" href="/Settings/Settings/GetSettings">Settings</a> </li>
+        <li><a href="SystemMaintenance/Periods/GetPeriods">Configure Period</a></li> -->
+    </ul>
+</li>
+</ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Sidebar -->
+
+                
+
+<style>
+    li span:hover {
+        color: red;
+    }
+</style>
+<div class="content-page">
+    <!-- Start content -->
+    <div class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="breadcrumb-holder">
+                        <h1 class="main-title float-left">Location</h1>
+                        <!-- <div class="clearfix"></div>-->
+                        <ol class="breadcrumb float-right">
+                            <li class="breadcrumb-item">HH Registration</li>
+                            <li class="breadcrumb-item">Register</li>
+                            <li class="breadcrumb-item active">Location</li>
+                        </ol>
+
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- end row -->
+            <div class="row">
+
+                <div class="col-xs-2 col-sm-6 col-md-6 col-lg-2 col-xl-12 tab-custom">
+                    <ul class="nav nav-tabs">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="householdgradlist.html">Household List</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="householdgrad.html">Graduation</a>
+                        </li>
+
+
+                    </ul>
+                    <div class="card mb-5">
+
+                        <div class="row">
+
+                            <div class="col-md-12">
+
+                                <div class="card-body">
+                                    <h5 class="text">
+
+                                        <span class="pull-left"><a role="button" href="#" data-toggle="modal" data-target="#LocationModal"><i class="fa fa-globe" aria-hidden="true"></i> <abbr></abbr> Location</a></span>
+
+                                    </h5>
+                                    <div class="pull-left">
+                                        <div class="card-body">
+
+                                            <label align="left" id="lblLocation" style="font:status-bar" class="row form-group"><h6>Current Location :- Amhara&gt;&gt; Ethiopia&gt;&gt; South Wolo&gt;&gt;Ambasel</h6></label>
+
+                                        </div>
+                                        <div class="modal fade" id="LocationModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="display: none;">
+                                            <div class="modal-dialog" role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" id="exampleModalLabel">Demography Location  </h5>
+                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+
+
+                                                        <div class="card-body">
+                                                            
+
+<div>
+    <div class="form-group">
+        <div class="row">
+            <div class="col-sm-1"><label for="Inputname" class="select-txt">Search</label></div>&nbsp;&nbsp;&nbsp;&nbsp;
+            <div class="col-sm-2"><input type="text" class="form-control" id="txtLevelEngSearch" maxlength="20" /></div>
+        </div>
+    </div>
+    <span class="select-txt">Select Location</span>
+    <div class="location-div">
+
+            <ul id="tree1" class="tree">
+                    <li class="tree-li">
+                        <span style="cursor: pointer" class="contextMenuItem Node" id="ebb9b44c-7c5d-4096-98dc-7a0a4674fc6a"> Ambasel (30404)</span>
+                            <ul class="tree-li-ul">
+                                <li class="tree-li-ul-li">
+                                    <span style="cursor: pointer" class="contextMenuItem Node" id="b4bca81c-46b5-42c3-8bb4-e13f43c68527"> Adisamba (30404003)</span>
+                                </li>
+                            </ul>
+                            <ul class="tree-li-ul">
+                                <li class="tree-li-ul-li">
+                                    <span style="cursor: pointer" class="contextMenuItem Node" id="bd83f593-356a-4714-9f8d-52d4b68b562f"> Amba Mariyam (30404004)</span>
+                                </li>
+                            </ul>
+                            <ul class="tree-li-ul">
+                                <li class="tree-li-ul-li">
+                                    <span style="cursor: pointer" class="contextMenuItem Node" id="cdd9c4eb-3599-4817-b475-740f56bedf5a"> Arbatnsay (30404017)</span>
+                                </li>
+                            </ul>
+                            <ul class="tree-li-ul">
+                                <li class="tree-li-ul-li">
+                                    <span style="cursor: pointer" class="contextMenuItem Node" id="99640030-dc8e-488b-8d5b-900762b27717"> Bolo (30404023)</span>
+                                </li>
+                            </ul>
+                            <ul class="tree-li-ul">
+                                <li class="tree-li-ul-li">
+                                    <span style="cursor: pointer" class="contextMenuItem Node" id="ef4dd888-b645-4f30-b43e-b6585c0d28ae"> Brkumaamba (30404001)</span>
+                                </li>
+                            </ul>
+                            <ul class="tree-li-ul">
+                                <li class="tree-li-ul-li">
+                                    <span style="cursor: pointer" class="contextMenuItem Node" id="9f15bb6c-a25d-41fe-89ac-a79e7acf41de"> Chefe (30404021)</span>
+                                </li>
+                            </ul>
+                            <ul class="tree-li-ul">
+                                <li class="tree-li-ul-li">
+                                    <span style="cursor: pointer" class="contextMenuItem Node" id="22e0aca7-39fc-4ced-a835-4631fb1d2104"> Dbalmaryam (30404006)</span>
+                                </li>
+                            </ul>
+                            <ul class="tree-li-ul">
+                                <li class="tree-li-ul-li">
+                                    <span style="cursor: pointer" class="contextMenuItem Node" id="2328e89f-46c2-4f88-8fab-42c07426571c"> Dino (30404018)</span>
+                                </li>
+                            </ul>
+                            <ul class="tree-li-ul">
+                                <li class="tree-li-ul-li">
+                                    <span style="cursor: pointer" class="contextMenuItem Node" id="46196abb-2033-42b5-9181-1172856c20aa"> Dolba (30404009)</span>
+                                </li>
+                            </ul>
+                            <ul class="tree-li-ul">
+                                <li class="tree-li-ul-li">
+                                    <span style="cursor: pointer" class="contextMenuItem Node" id="3c544784-012a-4585-8e7a-d56a5b382ba8"> Donka (30404015)</span>
+                                </li>
+                            </ul>
+                            <ul class="tree-li-ul">
+                                <li class="tree-li-ul-li">
+                                    <span style="cursor: pointer" class="contextMenuItem Node" id="bb720d23-e262-498f-997e-17aea59658cf"> Dorga (30404013)</span>
+                                </li>
+                            </ul>
+                            <ul class="tree-li-ul">
+                                <li class="tree-li-ul-li">
+                                    <span style="cursor: pointer" class="contextMenuItem Node" id="7c9b58cc-b28b-4e0a-8c8a-7dad5ba359a0"> Dubl (30404012)</span>
+                                </li>
+                            </ul>
+                            <ul class="tree-li-ul">
+                                <li class="tree-li-ul-li">
+                                    <span style="cursor: pointer" class="contextMenuItem Node" id="33ac7871-c0b1-4c66-adbd-10a46163dc5a"> Golye (30404020)</span>
+                                </li>
+                            </ul>
+                            <ul class="tree-li-ul">
+                                <li class="tree-li-ul-li">
+                                    <span style="cursor: pointer" class="contextMenuItem Node" id="fa698dbe-bdaa-4cf9-8f42-ffcfcf5aa36c"> Gshen (30404007)</span>
+                                </li>
+                            </ul>
+                            <ul class="tree-li-ul">
+                                <li class="tree-li-ul-li">
+                                    <span style="cursor: pointer" class="contextMenuItem Node" id="12f1bd09-5871-42db-9385-0579232f984a"> Hamusit (30404019)</span>
+                                </li>
+                            </ul>
+                            <ul class="tree-li-ul">
+                                <li class="tree-li-ul-li">
+                                    <span style="cursor: pointer" class="contextMenuItem Node" id="05b18473-e2ea-49fc-a257-0fc9a94e7c63"> Koho (30404002)</span>
+                                </li>
+                            </ul>
+                            <ul class="tree-li-ul">
+                                <li class="tree-li-ul-li">
+                                    <span style="cursor: pointer" class="contextMenuItem Node" id="b2a84ed9-6b4a-4739-81ca-c239a1eab4ce"> Koshemu (30404022)</span>
+                                </li>
+                            </ul>
+                            <ul class="tree-li-ul">
+                                <li class="tree-li-ul-li">
+                                    <span style="cursor: pointer" class="contextMenuItem Node" id="cd2c8f52-fca0-4336-a74f-113a83e955a8"> Malewa (30404005)</span>
+                                </li>
+                            </ul>
+                            <ul class="tree-li-ul">
+                                <li class="tree-li-ul-li">
+                                    <span style="cursor: pointer" class="contextMenuItem Node" id="ea0943d1-ca9b-432f-bda0-30ed2d3ca507"> Robit (30404016)</span>
+                                </li>
+                            </ul>
+                            <ul class="tree-li-ul">
+                                <li class="tree-li-ul-li">
+                                    <span style="cursor: pointer" class="contextMenuItem Node" id="f46c1fb5-6b7b-4b50-a6b0-528dbca63a8d"> Senka (30404010)</span>
+                                </li>
+                            </ul>
+                            <ul class="tree-li-ul">
+                                <li class="tree-li-ul-li">
+                                    <span style="cursor: pointer" class="contextMenuItem Node" id="1af77722-bddd-4cd8-95a7-6eb89830e2d8"> Teregmamo (30404008)</span>
+                                </li>
+                            </ul>
+                            <ul class="tree-li-ul">
+                                <li class="tree-li-ul-li">
+                                    <span style="cursor: pointer" class="contextMenuItem Node" id="8f27c50d-e2a6-40ff-ad5b-60d78cb84168"> Teremochg (30404011)</span>
+                                </li>
+                            </ul>
+                            <ul class="tree-li-ul">
+                                <li class="tree-li-ul-li">
+                                    <span style="cursor: pointer" class="contextMenuItem Node" id="66078828-9a7d-4755-8a43-4ff60377bc4e"> Tilaabalima (30404014)</span>
+                                </li>
+                            </ul>
+                            <ul class="tree-li-ul">
+                                <li class="tree-li-ul-li">
+                                    <span style="cursor: pointer" class="contextMenuItem Node" id="de5397fd-1217-435a-80fc-4f7319c56d71"> Wuchale Town (3040401)</span>
+                                </li>
+                            </ul>
+
+                    </li>
+            </ul>
+    </div>
+    <div class="clearfix"></div>
+</div>
+
+
+
+
+
+
+
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="table-responsive">
+
+                                        <table id="example1" class="table table-bordered table-hover display">
+                                            <thead>
+                                                <tr>
+                                                    <th>No</th>
+                                                    <th>Household Id No.</th>
+                                                    <th>Full Name</th>
+                                                    <th>Gender</th>
+                                                    <th>Registration Date</th>
+                                                    <th>Age</th>
+                                                    <th>Action</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                    <tr>
+                                                    <td>1</td>
+                                                    <td>304010111151</td>
+                                                    <td>Zemzem  Mohammed x</td>
+                                                    <td>Female</td>
+                                                    <td>5182019 93648 PM</td>
+                                                    <td>2018</td>
+                                                    <td>
+                                                        <a class="btn btn-outline-info"  data-placement= "top" data-toggle=" tooltip" data-title= "Edit" href="householdgrad.html"> <i class="fa fa-graduation-cap" aria-hidden="true"></i> </a>
+
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>2</td>
+                                                    <td>3040132173</td>
+                                                    <td>Amakel Yimer Mohammed</td>
+                                                    <td>Female</td>
+                                                    <td>5182019 93648 PM</td>
+                                                    <td>2018</td>
+                                                    <td>
+                                                        <a class="btn btn-outline-info " data-placement="top" data-toggle= "tooltip" data-title= "Edit" href="householdgrad.html"> <i class="fa fa-graduation-cap" aria-hidden= "true"></i> </a>
+
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- END container-fluid -->
+</div>
+
+            </div>
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            <p>  <a href="/Home/Privacy">Privacy</a>   &copy;  Copyright 2019 MoLSA, Ministry of Agriculture(MoA), All rights reserved.</p>
+        </div>
+    </footer>
+    
+
+        <script src="../assets/js/jquery-1.10.2.min.js"></script>
+        <script src="../assets/js/modernizr.min.js"></script>
+        <script src="../assets/js/jquery.min.js"></script>
+        <script src="../assets/js/moment.min.js"></script>
+        <script src="../assets/js/jquery-ui.min.js"></script>
+        <script src="../assets/js/popper.min.js"></script>
+        <script src="../assets/js/bootstrap.min.js"></script>
+        <script src="../assets/js/jquery.validate.min.js"></script>
+        <script src="../assets/js/detect.js"></script>
+        <script src="../assets/js/fastclick.js"></script>
+        <script src="../assets/js/jquery.blockUI.js"></script>
+        <script src="../assets/js/jquery.nicescroll.js"></script>
+        <script src="../assets/js/bootstrap-datepicker.min.js"></script>
+        <!-- App js -->
+        <script src="../assets/js/pikeadmin.js"></script>
+        <!-- BEGIN Java Script for this page -->
+        <script src="../assets/js/Chart.min.js"></script>>
+        <!-- Counter-Up-->
+        <script src="../assets/plugins1/waypoints/lib/jquery.waypoints.min.js"></script>
+        <script src="../assets/plugins1/counterup/jquery.counterup.min.js"></script>
+
+        <script src="https://swisnl.github.io/jQuery-contextMenu/dist/jquery.contextMenu.min.js"></script>
+        <script src="https://code.highcharts.com/highcharts.js"></script>
+        <script src="https://code.highcharts.com/modules/exporting.js"></script>
+        <script src="https://code.highcharts.com/modules/export-data.js"></script>
+        
+        
+
+
+      
+            
+                <script src="../assets/js/canvasjs.min.js"></script>
+
+
+        <script>
+            $(document).ready(function () {
+                //$('#example1').DataTable();
+                $('.datepicker').datepicker({
+                    format: "dd-M-yyyy",
+                    todayBtn: "linked",
+                    autoclose: true,
+                    todayHighlight: true
+                });
+
+            });
+        </script>
+
+        <script>
+                        var currentdate = new Date();
+                        var weekday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+                        var month = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+                        var hours = currentdate.getHours();
+                        var minutes = currentdate.getMinutes();
+                        var ampm = hours >= 12 ? 'PM' : 'AM';
+                        hours = hours % 12;
+                        hours = hours ? hours : 12; // the hour '0' should be '12'
+                        minutes = minutes < 10 ? '0' + minutes : minutes;
+                        var strTime = hours + ':' + minutes + ' ' + ampm;
+
+
+                        var datetime = strTime + ", "
+                            + weekday[currentdate.getDay()] + ", "
+                            + month[currentdate.getMonth()] + " "
+                            + currentdate.getDate() + ", "
+                            //+ (currentdate.getMonth()+1)  + "/"
+                            + currentdate.getFullYear() + " "
+
+                        //+ currentdate.getFullYear() + " </br> "
+                                                            var currentdate = new Date();
+                                                            var weekday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+                                                            var month = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+                                                            var hours = currentdate.getHours();
+                                                            var minutes = currentdate.getMinutes();
+                                                            var ampm = hours >= 12 ? 'PM' : 'AM';
+                                                            hours = hours % 12;
+                                                            hours = hours ? hours : 12; // the hour '0' should be '12'
+                                                            minutes = minutes < 10 ? '0' + minutes : minutes;
+var strTime = hours + ':' + minutes + ' ' + ampm;
+
+
+var datetime = strTime + ", "
++ weekday[currentdate.getDay()] + ", "
++ month[currentdate.getMonth()] + " "
++ currentdate.getDate() + ", "
+//+ (currentdate.getMonth()+1)  + "/"
++ currentdate.getFullYear() + " "
+
+                                                            //+ currentdate.getFullYear() + " </br> "
+                    // + currentdate.getHours() + ":"
+                    // + currentdate.getMinutes() + " "
+                    // + currentdate.getSeconds();
+                    document.getElementById("cdateTime").innerHTML = datetime;
+
+                    //tree view location details script
+                    $(document).ready(function () {
+                        $.fn.extend({
+                            treed: function (o) {
+
+                                var openedClass = 'fa fa-minus';
+                                var closedClass = 'fa fa-plus';
+
+                                if (typeof o != 'undefined') {
+                                    if (typeof o.openedClass != 'undefined') {
+                                        openedClass = o.openedClass;
+                                    }
+                                    if (typeof o.closedClass != 'undefined') {
+                                        closedClass = o.closedClass;
+                                    }
+                                }
+                                ;
+
+                                //initialize each of the top levels
+                                var tree = $(this);
+                                tree.addClass("tree");
+                                tree.find('li').has("ul").each(function () {
+                                    var branch = $(this); //li with children ul
+                                    branch.prepend("<i class='indicator glyphicon " + closedClass + "'></i>");
+                                    branch.addClass('branch');
+                                    branch.on('click', function (e) {
+                                        if (this == e.target) {
+                                            var icon = $(this).children('i:first');
+                                            icon.toggleClass(openedClass + " " + closedClass);
+                                            $(this).children().children().toggle();
+                                        }
+                                    })
+                                    branch.children().children().toggle();
+                                });
+                                //fire event from the dynamically added icon
+                                tree.find('.branch .indicator').each(function () {
+                                    $(this).on('click', function () {
+                                        $(this).closest('li').click();
+                                    });
+                                });
+                                //fire event to open branch if the li contains an anchor instead of text
+                                tree.find('.branch>a').each(function () {
+                                    $(this).on('click', function (e) {
+                                        $(this).closest('li').click();
+                                        e.preventDefault();
+                                    });
+                                });
+                                //fire event to open branch if the li contains a button instead of text
+                                tree.find('.branch>button').each(function () {
+                                    $(this).on('click', function (e) {
+                                        $(this).closest('li').click();
+                                        e.preventDefault();
+                                    });
+                                });
+                            }
+                        });
+
+                        //Initialization of treeviews
+
+                        $('#tree1').treed();
+
+                        $('#tree2').treed({ openedClass: 'glyphicon-folder-open', closedClass: 'glyphicon-folder-close' });
+
+                        $('#tree3').treed({ openedClass: 'glyphicon-chevron-right', closedClass: 'glyphicon-chevron-down' });
+
+                    });
+                    // END CODE FOR BASIC DATA TABLE
+
+        </script>
+        <script>
+            $('#txtLevelEngSearch').keyup(function () {
+                var filter_text = $(this).val();
+                // If user input is not null
+                if (filter_text) {
+                    // Iterate through all branches
+                    $('.tree-li-ul').each(function () {
+                        // Initiate match flag to false for this branch
+                        var match_flag = false
+                        // Iterate through all items within one branch
+                        $(this).children().each(function () {
+                            // If user input matches this item
+                            if ($(this).children().text().toLowerCase().indexOf(filter_text) >= 0) {
+                                // Set match_flag for this branch to true
+                                match_flag = true;
+                                // Expand this branch
+                                $(this).parent().addClass('tree-open');
+                                // Show this item
+                                $(this).slideDown();
+                            }
+                            // If user input doesn't match this item
+                            else {
+                                // Hide this item
+                                $(this).slideUp();
+                                // If user input doesn't match any item in this branch, collapse this branch
+                                if (!match_flag) $(this).parent().parent().removeClass('tree-open');
+                            }
+                        });
+                    });
+
+                }
+                // If user input is null
+                else {
+                    // Hide all the branches
+                    $('.tree-li-ul').removeClass('tree-open');
+                    // Show all items
+                    $('.tree-li-ul-li').slideDown();
+                }
+            });
+        </script>
+        <!-- END Java Script for this page -->
+    
+    
+    <script src="../js/site.js?v=4q1jwFhaPaZgr8WAUSrux6hAuh0XDg9kPS3xIVq36I0"></script>
+    <script src="../js/localization/localization.js"></script>
+
+    
+    <script>
+        $('.Node').click(function () {
+            var id = $(this).attr('id');
+            window.location.href = "GetHouseHoldsListForGraduation?LocID=" + id;
+        });
+    </script>
+    
+    <script src="../assets/js/jquery.dataTables.min.js"></script>
+    <script src="../js/Registration/HouseholdGeneralInfo-ajax.js"></script>
+    <script src="../assets/js/dataTables.bootstrap4.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#example1').DataTable();
+        });
+    </script>
+
+</body>
+</html>

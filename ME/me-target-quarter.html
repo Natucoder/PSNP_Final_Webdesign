@@ -1,0 +1,1173 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <title>PSNP</title>
+    <meta name="description" content="Free Bootstrap 4 Admin Theme | Pike Admin">
+    <meta name="author" content="Pike Web Development - https://www.pikephp.com">
+    
+        <!-- Favicon -->
+        <link rel="shortcut icon" href="../assets/images/favicon.ico">
+        <!-- Bootstrap CSS -->
+        <link href="../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <!-- Font Awesome CSS -->
+        <link href="../assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+        <!-- Custom CSS -->
+        <link href="../assets/css/style.css" rel="stylesheet" type="text/css" />
+        <!-- BEGIN CSS for this page -->
+
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap4.min.css" />
+        <!-- BEGIN CSS for Context Menu -->
+        <link rel="stylesheet" type="text/css" href="https://swisnl.github.io/jQuery-contextMenu/dist/jquery.contextMenu.min.css" />
+
+        <link href="../assets/css/bootstrap-datepicker.min.css" rel="stylesheet" />
+        <link href="../assets/css/modal.css" rel="stylesheet" />
+        <!-- END CSS for this page -->
+    
+</head>
+<body>
+
+    <div>
+        
+
+
+        <main role="main">
+
+            <div id="main">
+                <!-- top bar navigation -->
+                <div class="headerbar">
+                    <!-- LOGO -->
+
+                    <div class="headerbar-left">
+                        <a href="index.html" class="logo">
+                            <img alt="logo" src="../assets/images/llogo.png" />
+                            <span><strong>MIS</strong> </span>
+                        </a>
+                    </div>
+
+                    <nav class="navbar-custom">
+
+                        <ul class="list-inline float-right mb-0">
+                            <li class="list-inline-item dropdown notif">
+                                <div id="cdateTime"></div>
+                            </li>
+                            <li class="list-inline-item dropdown notif">
+                                <a class="nav-link dropdown-toggle arrow-none" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+                                    <i class="fa fa-cog bigfonts"></i><span class=""></span>
+                                </a>
+
+                                <div class="dropdown-menu dropdown-menu-right profile-dropdown">
+                                    <!-- item-->
+                                    <div class="dropdown-item noti-title">
+                                        <h5 class="text-overflow"><small class="localize" data-key="Language Setting">Language Setting</small> </h5>
+                                    </div>
+                                    <!-- item-->
+                                    <a class="dropdown-item notify-item">
+                                        <i class="fa fa-dot-circle-o bigfonts"></i> <span>English</span>
+                                    </a>
+
+                                    <!-- item-->
+                                    <a class="dropdown-item notify-item">
+                                        <i class="fa fa-dot-circle-o bigfonts"></i>
+                                        <span>አማርኛ </span>
+                                    </a>
+                                    
+
+                                    <!-- item-->
+
+
+                                </div>
+                            </li>
+
+
+                            <li class="list-inline-item dropdown notif">
+                                <a class="nav-link dropdown-toggle nav-user" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+                                    <img src="../assets/images/avatars/admin.png" alt="Profile image" class="avatar-rounded">
+                                    <span class="profile-name">Pramod Barik <span class="designation">System Admin</span></span>
+
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-right profile-dropdown">
+                                    <!-- item-->
+                                    <div class="dropdown-item noti-title">
+                                        <h5 class="text-overflow"><small>Hello, admin</small> </h5>
+                                    </div>
+
+                                    <!-- item-->
+                                    <a href="../editprofile.html class="dropdown-item notify-item">
+                                        <i class="fa fa-user"></i> <span>Profile</span>
+                                    </a>
+
+                                    <!-- item-->
+                                    <a href="../login.html" class="dropdown-item notify-item">
+                                        <form id="logoutForm" class="form-inline" action="/Identity/Account/Logout?returnUrl=%2F" method="post">
+                                            <button id="logout" type="submit" class="nav-link btn btn-link text-dark">Logout</button>
+                                        <input name="__RequestVerificationToken" type="hidden" value="CfDJ8HfqWLKQCMFOhdNWmWergeYY7KftlPqKXuGUmOXWNGSP0FlZdL1wiKhLKVfA6zbHlJ1q-jIZzNrOcUwept0i8FbZ3taVwYxHDqfn7013j-Kv69kchPQZlYAX0PwcAqqmWre8pnmd28dw03tcZVjAvfdLMOVfyIPVYpQNtWFITia6crOtZtfyaUfN8zwkrxMzkA" /></form>
+                                    </a>
+
+                                    <!-- item-->
+                                    <a target="_blank" href="#" class="dropdown-item notify-item">
+                                        <i class="fa fa-external-link"></i> <span>Transparency</span>
+                                    </a>
+                                </div>
+                            </li>
+
+                        </ul>
+
+                        <ul class="list-inline menu-left mb-0">
+                            <li class="float-left">
+                                <button class="button-menu-mobile open-left">
+                                    <i class="fa fa-fw fa-bars"></i>
+                                </button>
+                            </li>
+                        </ul>
+
+                    </nav>
+
+                </div>
+                <!-- End Navigation -->
+                <!-- Left Sidebar -->
+                <div class="left main-sidebar">
+
+                    <div class="sidebar-inner leftscroll">
+            
+                        <div id="sidebar-menu">
+            
+                            <ul class="list-unstyled">
+            
+                                <li class="submenu">
+                                    <a class="" href="../index.html"><i class="fa fa-fw fa-bars"></i><span> Dashboard </span> </a>
+                                </li>
+                                
+                                <li >
+                                        <a><i class="fa fa-id-card bigfonts"></i> <span>Manage Households </span> <span class="menu-arrow"></span></a>
+                                        <ul class="list-unstyled" >
+                                                <li> <a class="nav-link " href="../registration/gethouseholds.html">Manage Household Profiles</a></li>
+                                                <li > <a class="nav-link" href="../registration/managehhmemberlist.html">Manage Household Members</a></li>
+                                                <li > <a class="nav-link" href="../registration/managehhlistchardetail.html">Manage Household Characterstics</a></li>
+                                                <li > <a class="nav-link" href="../registration/hhlistassetdetail.html">Record Household Assets</a></li>
+                                            <!-- <li> <a class="nav-link" href="registration/manageassetlossdetaillist.html">Record Household Asset Loss</a></li> -->
+                                            <li > <a class="nav-link" href="../registration/hhfoodgapdetaillist.html">Track Household Food Gap</a></li>
+                                            <li> <a class="nav-link" href="../registration/shockhistorylist.html">Track Household Shock History</a></li>
+                                    
+                                        </ul>
+                                    </li>
+                                    <li class="submenu">
+                                            <a><i class="fa fa-fire" aria-hidden="true"></i> <span> HRD</span> <span class="menu-arrow"></span></a>
+                                            <ul class="list-unstyled">
+                                            <li> <a class="nav-link" href="../HRD/gethouseholds.html">Manage HRD Household Profile</a></li>
+                                            <li>
+                                           <a class="nav-link " href="../HRD/manageassetlossdetaillist.html">Record AssetLoss</a>
+                                            </li>
+                                                                         
+                                            </ul>
+                                           </li>
+            <li class="submenu ">
+            <a><i class="fa fa-graduation-cap"></i> <span> Household Graduation  </span> <span class="menu-arrow"></span></a>
+            <ul class="list-unstyled" >
+            <li> <a class="nav-link" href="../Graduation/noticedetaillist.html">Notify Household</a></li>
+            <li>
+            <a class="nav-link" href="../Graduation/householdgradlist.html">HouseholdGraduation</a>
+            </li>
+            <li>
+            <a class="nav-link " href="../Graduation/memberexithhlist.html">Household Members Exit</a>
+            </li>
+            
+            </ul>
+            </li>
+            <li class="submenu ">
+            <a href="#" ><i class="fa fa-file-o bigfonts"></i> <span> Targeting </span> <span class="menu-arrow"></span></a>
+            <ul class="list-unstyled" >
+            <li ><a href="../targeting/configure-targetcriteria.html">Configure Target Crieteria</a></li>
+            <li><a href="../targeting/view-targetcriteria.html">View Target With Crieteria</a></li>
+            </ul>
+            </li>
+            <li class="submenu ">
+            <a href="#" ><i class="fa fa-book bigfonts"></i> <span> Enrollment </span> <span class="menu-arrow"></span></a>
+            <ul class="list-unstyled" >
+            <li><a href="../enrollment/location.html">Verify</a></li>
+            
+            </ul>
+            </li>
+            <li class="submenu">
+            <a href="#"><i class="fa fa-flash bigfonts"></i> <span> Planning </span> <span class="menu-arrow"></span></a>
+            <ul class="list-unstyled">
+            <li ><a href="../planning/pw-activities-planing.html">PW Activities Planning</a></li>
+            <li> <a href="../planning/sub-project-budget-planing.html">Sub-Project Budget Planning</a></li>
+            <li><a href="../planning/config-woreda-client.html">Configure Clients for Woreda</a></li>
+            <li><a href="../Livelihood/LH_Planning_Location.html">LH Planning</a></li>
+            </ul>
+            </li>
+            
+            <li class="submenu">
+            <a href="#"><i class="fa fa-eercast bigfonts"></i> <span class="localize" data-key=""> Public Work </span> <span class="menu-arrow"></span></a>
+            <ul class="list-unstyled">
+            
+            
+            <li><a class="nav-link" href="../PublicWork/Pw-Schedule.html">Configure PW Schedule</a></li>
+            <li><a class="nav-link" href="../PublicWork/Getprogrampaymentitemlocation.html">Program Payment Item</a></li>
+            <li><a class="nav-link" href="../PublicWork/Configurewage-Rate.html">Configure PW Wage Rate</a></li>
+            <li><a href="../PublicWork/configurepdcalculation.html">Person Days (PD) Estimates</a></li>
+            <!-- <li><a class="nav-link" href="Common/GenericLocationView/GetLocationPopUp?ActionType=TDStransitions">TDS Transition</a></li> -->
+            <li><a href="../PublicWork/socialservicelocation.html">Link To SocialServices</a></li>
+            <li><a class="nav-link" href="../PublicWork/transitionlocation.html">PW Transition</a></li>
+            <li><a class="nav-link" href="../PublicWork/Attendancelocation.html">Print Attendance</a></li>
+            <!-- <li><a class="nav-link active" href="/PublicWork/PWAttendances/GetPWAttendanceLocations">Record Attendance</a></li> -->
+            <li><a class="nav-link" href="../PublicWork/period-location.html">Configure Period Closing</a></li>
+            </ul>
+            </li>
+            <li class="submenu">
+                    <a href="#"><i class="fa fa-object-group" aria-hidden="true"></i> <span class="localize" data-key=""> Permanent Direct Support </span> <span class="menu-arrow"></span></a>
+                    <ul class="list-unstyled">
+                      <li><a class="nav-link localize" data-key="" href="../pds/pdsscheduleloc.html">Payment Schedule</a> </li>
+                      <li><a class="nav-link localize" data-key="" href="../pds/socialserviceprovidersloc.html">Social Service Providers</a> </li>
+                      <li><a class="nav-link localize" data-key="" href="../pds/pdslocation.html">Link to Social Service</a> </li>
+                      <li><a class="nav-link localize" data-key="" href="../pds/locationdisability.html">Permanent Direct Support Disability</a> </li>
+                      </ul>
+                    </li>
+         
+            <li class="submenu">
+            <a  href="#"><i class="fa fa-usd bigfonts" aria-hidden="true"></i> <span> Budget </span> <span class="menu-arrow"></span></a>
+            <ul class="list-unstyled">
+             <li><a href="../Budget/BudgetType.html">Configure Budget Type</a></li>
+            <li><a href="../Budget/budgetCeiling.html">Budget Ceiling</a></li>
+            <li><a href="../Budget/BLocation.html">Budget Planning</a></li>
+            <li><a href="../Budget/BudgetAppr.html">Budget Approval</a></li>
+            <li><a href="../Budget/Cashflow.html">Cashflow Forcasting</a></li>
+            <li><a href="../Budget/location.html">Budget Reconcilation</a></li>
+            
+            </ul>
+            </li>
+            
+            <li class="submenu">
+            <a href="#"><i class="fa fa-paypal bigfonts" aria-hidden="true"></i> <span>Transfer</span> <span class="menu-arrow"></span></a>
+            <ul class="list-unstyled">
+            <li><a class="nav-link " href="../payroll/PWClient.html">Prepare PW Payroll</a></li>
+            <li><a class="nav-link" href="../payroll/PDSPayroll.html">Prepare PDS Payroll</a></li>
+            <li><a class="nav-link" href="../payroll/ApprovePayroll.html">Approve Payroll</a></li>
+            <li><a class="nav-link" href="../payroll/PrintExportPayroll.html">Print and Export Payroll</a></li>
+            <li><a class="nav-link" href="../payroll/LHTransfer.html">Transfer Payroll</a></li>
+            <li><a class="nav-link" href="../payroll/Reconcilation.html">Payment Reconciliation</a></li>
+            <li><a class="nav-link" href="../payroll/cashAtHand.html">Cash Management</a></li>
+            </ul>
+            </li>
+            <li class="submenu">
+            <a href="#"><i class="fa fa-credit-card bigfonts" aria-hidden="true"></i> <span>GRM</span> <span class="menu-arrow"></span></a>
+            <ul class="list-unstyled">
+            <li><a href="../GRM/ConfigureKAC.html">Configure KAC</a></li>
+            <li><a href="../GRM/CCLocation.html">Configure Complaints</a></li>
+            <li><a href="../GRM/RegisterKAC.html">Register Member</a></li>
+            <li><a href="../GRM/grmauthority.html">Configure GRM Authority</a></li>
+            <li><a href="../GRM/POLocation.html">Configure Position of Member</a></li>
+            <li><a href="../GRM/GRVLocation.html">Grievance Registration</a></li>
+            <li><a href="../GRM/GRV-Location.html">Grievance Resolution</a></li>
+            </ul>
+            </li>
+            <li class="submenu ">
+            <a href="#"><i class="fa fa-rocket bigfonts" aria-hidden="true"></i> <span>Livelihood</span> <span class="menu-arrow"></span></a>
+            <ul class="list-unstyled">
+            <li><a href="../Livelihood/LH_Configure_Pathway_Add.html">Configure Pathway</a></li>
+            <li><a href="../Livelihood/LH_Transfer_View.html">View LH Transfer</a></li>
+            <li> <a href="../Livelihood/LH_Planning_Location.html">LH Planning</a></li>
+            <li><a href="../Livelihood/LH_Pathway_Location.html">LH Activities</a></li>
+            <li><a href="../Livelihood/location.html">LH Prioritization</a></li>
+            <li><a href="../Livelihood/lh-location.html">Approve LH</a></li>
+            <li><a href="../Livelihood/lh-implementation.html">LH Implementation</a></li>
+            
+            
+            </ul>
+            </li>
+            <li class="submenu active">
+            <a class="subdrop" href="#"><i class="fa fa-chain bigfonts" aria-hidden="true"></i> <span class="localize" data-key="">M and E</span> <span class="menu-arrow"></span></a>
+            <ul class="list-unstyled" style="display: block">
+            <li><a  class="nav-link"  href="me-Configure-indicatorAddRoot.html">Configure Indicators</a></li>
+            <li class="active"><a class="nav-link"  href="me-target-annual.html">Target Indicators</a></li>
+            <li><a  class="nav-link"  href="me-report.html">Reports</a></li>
+            <li><a  class="nav-link"  href="me-ScoreCard.html">Score Card</a></li>
+            </ul>
+            </li>
+            <li class="submenu">
+            <a href="#">
+            <i class="fa fa-users bigfonts" aria-hidden="true"></i> <span>User Account</span> <span class="menu-arrow"></span>
+            </a>
+            <ul class="list-unstyled">
+            <!-- <li><a href="Identity/Users/UsersList">User Account</a></li> -->
+            </ul>
+            </li>
+            <li class="submenu">
+            <a href="#"><i class="fa fa-pie-chart bigfonts" aria-hidden="true"></i> <span>Reports</span> <span class="menu-arrow"></span></a>
+            <ul class="list-unstyled">
+            <!-- <li><a class="nav-link" href="Report/TDSTransitionReport/GetReportLocations">Public WorkReport</a></li>
+            <li><a class="nav-link" href="Report/TDSTransitionReport/GetReportLocations?ActionType=TDSReport">HouseholdReport</a></li>
+            <li><a class="nav-link" href="Report/TDSTransitionReport/GetReportLocations?ActionType=TDSReport">TransferReport</a></li>
+            <li><a class="nav-link" href="Report/TDSTransitionReport/GetReportLocations?ActionType=TDSReport">AuditReport</a></li> -->
+            </ul>
+            </li>
+            
+            <li class="submenu">
+            <a href="#"><i class="fa fa-cogs bigfonts"></i> <span> Maintainance </span> <span class="menu-arrow"></span></a>
+            <ul class="list-unstyled">
+            <li><a href="../Maintainance/maintainance-psnp.html">Configure PSNP</a></li>
+            <li><a href="../Maintainance/maintainance-region.html">Configure Region</a></li>
+            <li><a href="../Maintainance/maintainance-zone.html">Configure Zone</a></li>
+            <li><a href="../Maintainance/maintainance-woreda.html">Configure Woreda</a></li>
+            <li><a href="../Maintainance/maintainance-kebele.html">Configure Kebele</a></li>
+            <li><a href="../Maintainance/maintainance-community.html">Configure Community</a></li>
+            <li><a href="../Maintainance/maintainance-targeting-woreda.html">Configure Target Woredas</a></li>
+            <li><a href="../Maintainance/maintainance-martial-status.html">Configure Marital Status</a></li>
+            <li><a href="../Maintainance/configure-activities.html">Configure Activities</a></li>
+            <li><a href="../Maintainance/maintainance-transfer-type.html">Configure Transfer Type</a></li>
+            <li><a href="../Maintainance/maintainance-tds-type.html">Configure Tds Type</a></li>
+            <li><a href="../Maintainance/maintainance-attendance-type.html">Configure Attendance Type</a></li>
+            <li><a href="../Maintainance/maintainance-designation.html">Configure Designation</a></li>
+            <li><a href="../Maintainance/maintainance-wealth-ranking.html">Configure Wealth Ranking</a></li>
+            <!-- <li><a href="maintainance-woreda-client.html">Configure Clients for Woreda</a></li> -->
+            <li><a href="../Maintainance/maintainance-health-status.html">Configure Health Status</a></li>
+            <li><a href="../Maintainance/maintainance-maternal-condition.html">Configure Maternal cond.</a></li>
+            <li><a href="../Maintainance/maintainance-land-measurement.html">Configure Land Measeurment</a></li>
+            <li><a href="../Maintainance/maintainance-land-status.html">Configure Land Status</a></li>
+            <li><a href="../Maintainance/maintainance-livestokes.html">Configure Livestokes</a></li>
+            <li><a href="../Maintainance/maintainance-relationship.html">Configure Relationship Types</a></li>
+            <li><a href="../Maintainance/configure-project.html">Configure Project</a></li>
+            <li><a href="../Maintainance/configure-sub-project.html">Configure Sub-project</a></li>
+            <li><a href="../Maintainance/configure-units.html">Configure Units</a></li>
+            <li><a href="#">Configure worknorms</a></li>
+            <li><a href="../Maintainance/configure-quaters.html">Configure Quaters</a></li>
+            <li><a href="../Maintainance/configure-activities.html">Configure Activities</a></li>
+            
+            </ul>
+            </li>
+            <li class="submenu">
+            <a href="#"><i class="fa fa-gear bigfonts" aria-hidden="true"></i> <span class="localize" data-key=""> Settings and Configuration </span> <span class="menu-arrow"></span></a>
+            <ul class="list-unstyled">
+            <!-- <li><a class="nav-link localize" data-key="" href="/Settings/Settings/GetSettings">Settings</a> </li>
+            <li><a href="SystemMaintenance/Periods/GetPeriods">Configure Period</a></li> -->
+            </ul>
+            </li>
+            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Sidebar -->
+
+                
+<div class="content-page">
+
+    <!-- Start content -->
+    <div class="content">
+
+        <div class="container-fluid">
+
+
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="breadcrumb-holder">
+                        <h1 class="main-title float-left">Baseline & Target</h1>
+                        <ol class="breadcrumb float-right">
+                            <li class="breadcrumb-item">M&E</li>
+                            <li class="breadcrumb-item">Indicator</li>
+                            <li class="breadcrumb-item active">Baseline & Target</li>
+                        </ol>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- end row -->
+            <div class="row">
+
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 tab-custom">
+                    <div class="row">
+                        <div class="col-sm-8">
+                            <ul class="nav nav-tabs">
+                                
+                                <li class="nav-item">
+                                    <a class="nav-link " href="me-target-annual.html">Target</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link active" href="me-target-quarter.html">Quarterly</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-4"><span class="mandatory"> * indicates mandatory </span></div>
+                    </div>
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <form data-parsley-validate novalidate method="get" action="/ME/Target">
+                                <div class="form-group row">
+                                    <label for="yearfrom" class="col-sm-2 col-form-label">For Year: <span class="text-danger">*</span></label>
+                                    <div class=" input-group col-sm-3">
+
+                                        <div class="input-group-append">
+                                            <input type="Number" min="2003" max="2023" value="2013" class="form-control" name="yearid" id="yearid">
+                                        </div>
+                                    </div>
+
+                                    <input type="submit" value="Load" class="btn btn-success" id="loadbtn">
+                                </div>
+
+                            </form>
+                            <hr />
+                            <form data-parsley-validate novalidate method="post" enctype="multipart/form-data" action="#">
+                                <input type="hidden" name="location" value="ffd22dbd-fe76-4a64-8ee9-00121ec5bff9" />
+                                <input type="hidden" name="targetYear" value="2011" />
+                                <div class="row">
+                                    <div class="col-12">
+                                        <span id="labeldiv"> </span>
+                                        <input type="button" value="Edit" class="btn btn-primary btn-sm" id="editbtn"> &nbsp;
+                                        <input type="submit" value="Save" hidden class="btn btn-primary btn-sm" id="savebtn"> &nbsp;
+                                        <input type="button" value="Cancel" hidden class="btn btn-warning btn-sm" id="submitbtn"> &nbsp;
+                                    </div>
+                                </div>
+                                <br />
+
+
+                                <div class="form-group row">
+                                    <div class="col-sm-12">
+
+                                        <table class="table table-bordered">
+
+                                            <tr>
+                                                <th>Indicator</th>
+                                                <th>Annual </th>
+                                                <th>Quarter I</th>
+                                                <th>Quarter II</th>
+                                                <th>Quarter III</th>
+                                                <th>Quarter IV</th>
+                                            </tr>
+                                            <tbody id="tableDetail">
+                                                    <tr>
+                                                        <td align="left" valign="middle">
+                                                            Percentage of safety net woredas where MIS and single registry are operational
+                                                            <input type="hidden" value="1582" name="id_1582" id="id_1582" />
+                                                        </td>
+                                                        <td align="left" valign="middle">
+                                                            0.00
+                                                        </td>
+                                                        <td align="left" valign="middle">
+                                                            <input type="Number" class="form-control baselinetxt" hidden id="Q_1id_1582" name="Q_1id_1582" value="10.00">
+                                                            <span class="baselinelbl">10.00</span>
+                                                        </td>
+                                                        <td align="left" valign="middle">
+                                                            <input type="Number" class="form-control baselinetxt" hidden id="Q_2id_1582" name="Q_2id_1582" value="11.00">
+                                                            <span class="targetlbl">11.00</span>
+                                                        </td>
+                                                        <td align="left" valign="middle">
+                                                            <input type="Number" class="form-control baselinetxt" hidden id="Q_3id_1582" name="Q_3id_1582" value="12.00">
+                                                            <span class="baselinelbl">12.00</span>
+                                                        </td>
+                                                        <td align="left" valign="middle">
+                                                            <input type="Number" class="form-control baselinetxt" hidden id="Q_4id_1582" name="Q_4id_1582" value="13.00">
+                                                            <span class="targetlbl">13.00</span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td align="left" valign="middle">
+                                                            Percentage of Kebeles poverty index is used
+                                                            <input type="hidden" value="3155" name="id_3155" id="id_3155" />
+                                                        </td>
+                                                        <td align="left" valign="middle">
+                                                            0.00
+                                                        </td>
+                                                        <td align="left" valign="middle">
+                                                            <input type="Number" class="form-control baselinetxt" hidden id="Q_5id_3155" name="Q_5id_3155" value="20.00">
+                                                            <span class="baselinelbl">20.00</span>
+                                                        </td>
+                                                        <td align="left" valign="middle">
+                                                            <input type="Number" class="form-control baselinetxt" hidden id="Q_6id_3155" name="Q_6id_3155" value="21.00">
+                                                            <span class="targetlbl">21.00</span>
+                                                        </td>
+                                                        <td align="left" valign="middle">
+                                                            <input type="Number" class="form-control baselinetxt" hidden id="Q_7id_3155" name="Q_7id_3155" value="22.00">
+                                                            <span class="baselinelbl">22.00</span>
+                                                        </td>
+                                                        <td align="left" valign="middle">
+                                                            <input type="Number" class="form-control baselinetxt" hidden id="Q_8id_3155" name="Q_8id_3155" value="23.00">
+                                                            <span class="targetlbl">23.00</span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td align="left" valign="middle">
+                                                            Total Number of Clients in safety net woredas
+                                                            <input type="hidden" value="4728" name="id_4728" id="id_4728" />
+                                                        </td>
+                                                        <td align="left" valign="middle">
+                                                            0.00
+                                                        </td>
+                                                        <td align="left" valign="middle">
+                                                            <input type="Number" class="form-control baselinetxt" hidden id="Q_9id_4728" name="Q_9id_4728" value="15.00">
+                                                            <span class="baselinelbl">15.00</span>
+                                                        </td>
+                                                        <td align="left" valign="middle">
+                                                            <input type="Number" class="form-control baselinetxt" hidden id="Q_10id_4728" name="Q_10id_4728" value="16.00">
+                                                            <span class="targetlbl">16.00</span>
+                                                        </td>
+                                                        <td align="left" valign="middle">
+                                                            <input type="Number" class="form-control baselinetxt" hidden id="Q_11id_4728" name="Q_11id_4728" value="17.00">
+                                                            <span class="baselinelbl">17.00</span>
+                                                        </td>
+                                                        <td align="left" valign="middle">
+                                                            <input type="Number" class="form-control baselinetxt" hidden id="Q_12id_4728" name="Q_12id_4728" value="18.00">
+                                                            <span class="targetlbl">18.00</span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td align="left" valign="middle">
+                                                            Percentage of households graduating in the previous year who report they were given at least 12 months&#x27; notice- disaggregated by sex
+                                                            <input type="hidden" value="6301" name="id_6301" id="id_6301" />
+                                                        </td>
+                                                        <td align="left" valign="middle">
+                                                            0.00
+                                                        </td>
+                                                        <td align="left" valign="middle">
+                                                            <input type="Number" class="form-control baselinetxt" hidden id="Q_13id_6301" name="Q_13id_6301" value="0.00">
+                                                            <span class="baselinelbl">0.00</span>
+                                                        </td>
+                                                        <td align="left" valign="middle">
+                                                            <input type="Number" class="form-control baselinetxt" hidden id="Q_14id_6301" name="Q_14id_6301" value="0.00">
+                                                            <span class="targetlbl">0.00</span>
+                                                        </td>
+                                                        <td align="left" valign="middle">
+                                                            <input type="Number" class="form-control baselinetxt" hidden id="Q_15id_6301" name="Q_15id_6301" value="0.00">
+                                                            <span class="baselinelbl">0.00</span>
+                                                        </td>
+                                                        <td align="left" valign="middle">
+                                                            <input type="Number" class="form-control baselinetxt" hidden id="Q_16id_6301" name="Q_16id_6301" value="0.00">
+                                                            <span class="targetlbl">0.00</span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td align="left" valign="middle">
+                                                            Percentage of graduate households that report full (12 month) food security
+                                                            <input type="hidden" value="7874" name="id_7874" id="id_7874" />
+                                                        </td>
+                                                        <td align="left" valign="middle">
+                                                            0.00
+                                                        </td>
+                                                        <td align="left" valign="middle">
+                                                            <input type="Number" class="form-control baselinetxt" hidden id="Q_17id_7874" name="Q_17id_7874" value="0.00">
+                                                            <span class="baselinelbl">0.00</span>
+                                                        </td>
+                                                        <td align="left" valign="middle">
+                                                            <input type="Number" class="form-control baselinetxt" hidden id="Q_18id_7874" name="Q_18id_7874" value="0.00">
+                                                            <span class="targetlbl">0.00</span>
+                                                        </td>
+                                                        <td align="left" valign="middle">
+                                                            <input type="Number" class="form-control baselinetxt" hidden id="Q_19id_7874" name="Q_19id_7874" value="0.00">
+                                                            <span class="baselinelbl">0.00</span>
+                                                        </td>
+                                                        <td align="left" valign="middle">
+                                                            <input type="Number" class="form-control baselinetxt" hidden id="Q_20id_7874" name="Q_20id_7874" value="0.00">
+                                                            <span class="targetlbl">0.00</span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td align="left" valign="middle">
+                                                            Number of woredas having contingency plan and DRR plan
+                                                            <input type="hidden" value="9447" name="id_9447" id="id_9447" />
+                                                        </td>
+                                                        <td align="left" valign="middle">
+                                                            0.00
+                                                        </td>
+                                                        <td align="left" valign="middle">
+                                                            <input type="Number" class="form-control baselinetxt" hidden id="Q_21id_9447" name="Q_21id_9447" value="0.00">
+                                                            <span class="baselinelbl">0.00</span>
+                                                        </td>
+                                                        <td align="left" valign="middle">
+                                                            <input type="Number" class="form-control baselinetxt" hidden id="Q_22id_9447" name="Q_22id_9447" value="0.00">
+                                                            <span class="targetlbl">0.00</span>
+                                                        </td>
+                                                        <td align="left" valign="middle">
+                                                            <input type="Number" class="form-control baselinetxt" hidden id="Q_23id_9447" name="Q_23id_9447" value="0.00">
+                                                            <span class="baselinelbl">0.00</span>
+                                                        </td>
+                                                        <td align="left" valign="middle">
+                                                            <input type="Number" class="form-control baselinetxt" hidden id="Q_24id_9447" name="Q_24id_9447" value="0.00">
+                                                            <span class="targetlbl">0.00</span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td align="left" valign="middle">
+                                                            Percentage of woredas&#xA;providing regular (12 months / year) EW monitoring data to the regions
+                                                            <input type="hidden" value="11020" name="id_11020" id="id_11020" />
+                                                        </td>
+                                                        <td align="left" valign="middle">
+                                                            0.00
+                                                        </td>
+                                                        <td align="left" valign="middle">
+                                                            <input type="Number" class="form-control baselinetxt" hidden id="Q_25id_11020" name="Q_25id_11020" value="0.00">
+                                                            <span class="baselinelbl">0.00</span>
+                                                        </td>
+                                                        <td align="left" valign="middle">
+                                                            <input type="Number" class="form-control baselinetxt" hidden id="Q_26id_11020" name="Q_26id_11020" value="0.00">
+                                                            <span class="targetlbl">0.00</span>
+                                                        </td>
+                                                        <td align="left" valign="middle">
+                                                            <input type="Number" class="form-control baselinetxt" hidden id="Q_27id_11020" name="Q_27id_11020" value="0.00">
+                                                            <span class="baselinelbl">0.00</span>
+                                                        </td>
+                                                        <td align="left" valign="middle">
+                                                            <input type="Number" class="form-control baselinetxt" hidden id="Q_28id_11020" name="Q_28id_11020" value="0.00">
+                                                            <span class="targetlbl">0.00</span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td align="left" valign="middle">
+                                                            Percentage of woreda annual safety net plans fully incorporated in woreda development plan with a rating of good or above - disaggregate by highland and lowland
+                                                            <input type="hidden" value="12593" name="id_12593" id="id_12593" />
+                                                        </td>
+                                                        <td align="left" valign="middle">
+                                                            0.00
+                                                        </td>
+                                                        <td align="left" valign="middle">
+                                                            <input type="Number" class="form-control baselinetxt" hidden id="Q_29id_12593" name="Q_29id_12593" value="0.00">
+                                                            <span class="baselinelbl">0.00</span>
+                                                        </td>
+                                                        <td align="left" valign="middle">
+                                                            <input type="Number" class="form-control baselinetxt" hidden id="Q_30id_12593" name="Q_30id_12593" value="0.00">
+                                                            <span class="targetlbl">0.00</span>
+                                                        </td>
+                                                        <td align="left" valign="middle">
+                                                            <input type="Number" class="form-control baselinetxt" hidden id="Q_31id_12593" name="Q_31id_12593" value="0.00">
+                                                            <span class="baselinelbl">0.00</span>
+                                                        </td>
+                                                        <td align="left" valign="middle">
+                                                            <input type="Number" class="form-control baselinetxt" hidden id="Q_32id_12593" name="Q_32id_12593" value="0.00">
+                                                            <span class="targetlbl">0.00</span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td align="left" valign="middle">
+                                                            Percentage of clients and non-clients who are aware of programme objectives and entitlements
+                                                            <input type="hidden" value="14166" name="id_14166" id="id_14166" />
+                                                        </td>
+                                                        <td align="left" valign="middle">
+                                                            0.00
+                                                        </td>
+                                                        <td align="left" valign="middle">
+                                                            <input type="Number" class="form-control baselinetxt" hidden id="Q_33id_14166" name="Q_33id_14166" value="0.00">
+                                                            <span class="baselinelbl">0.00</span>
+                                                        </td>
+                                                        <td align="left" valign="middle">
+                                                            <input type="Number" class="form-control baselinetxt" hidden id="Q_34id_14166" name="Q_34id_14166" value="0.00">
+                                                            <span class="targetlbl">0.00</span>
+                                                        </td>
+                                                        <td align="left" valign="middle">
+                                                            <input type="Number" class="form-control baselinetxt" hidden id="Q_35id_14166" name="Q_35id_14166" value="0.00">
+                                                            <span class="baselinelbl">0.00</span>
+                                                        </td>
+                                                        <td align="left" valign="middle">
+                                                            <input type="Number" class="form-control baselinetxt" hidden id="Q_36id_14166" name="Q_36id_14166" value="0.00">
+                                                            <span class="targetlbl">0.00</span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td align="left" valign="middle">
+                                                            Percentage of grievances registered related to delivery of PSNP that are&#xA;addressed
+                                                            <input type="hidden" value="15739" name="id_15739" id="id_15739" />
+                                                        </td>
+                                                        <td align="left" valign="middle">
+                                                            0.00
+                                                        </td>
+                                                        <td align="left" valign="middle">
+                                                            <input type="Number" class="form-control baselinetxt" hidden id="Q_37id_15739" name="Q_37id_15739" value="0.00">
+                                                            <span class="baselinelbl">0.00</span>
+                                                        </td>
+                                                        <td align="left" valign="middle">
+                                                            <input type="Number" class="form-control baselinetxt" hidden id="Q_38id_15739" name="Q_38id_15739" value="0.00">
+                                                            <span class="targetlbl">0.00</span>
+                                                        </td>
+                                                        <td align="left" valign="middle">
+                                                            <input type="Number" class="form-control baselinetxt" hidden id="Q_39id_15739" name="Q_39id_15739" value="0.00">
+                                                            <span class="baselinelbl">0.00</span>
+                                                        </td>
+                                                        <td align="left" valign="middle">
+                                                            <input type="Number" class="form-control baselinetxt" hidden id="Q_40id_15739" name="Q_40id_15739" value="0.00">
+                                                            <span class="targetlbl">0.00</span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td align="left" valign="middle">
+                                                            Number of safety net kebeles implementing social accountability tools
+                                                            <input type="hidden" value="17312" name="id_17312" id="id_17312" />
+                                                        </td>
+                                                        <td align="left" valign="middle">
+                                                            0.00
+                                                        </td>
+                                                        <td align="left" valign="middle">
+                                                            <input type="Number" class="form-control baselinetxt" hidden id="Q_41id_17312" name="Q_41id_17312" value="0.00">
+                                                            <span class="baselinelbl">0.00</span>
+                                                        </td>
+                                                        <td align="left" valign="middle">
+                                                            <input type="Number" class="form-control baselinetxt" hidden id="Q_42id_17312" name="Q_42id_17312" value="0.00">
+                                                            <span class="targetlbl">0.00</span>
+                                                        </td>
+                                                        <td align="left" valign="middle">
+                                                            <input type="Number" class="form-control baselinetxt" hidden id="Q_43id_17312" name="Q_43id_17312" value="0.00">
+                                                            <span class="baselinelbl">0.00</span>
+                                                        </td>
+                                                        <td align="left" valign="middle">
+                                                            <input type="Number" class="form-control baselinetxt" hidden id="Q_44id_17312" name="Q_44id_17312" value="0.00">
+                                                            <span class="targetlbl">0.00</span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td align="left" valign="middle">
+                                                            Capacity development indicators which are expected to be developed after the development of CD strategy
+                                                            <input type="hidden" value="18885" name="id_18885" id="id_18885" />
+                                                        </td>
+                                                        <td align="left" valign="middle">
+                                                            0.00
+                                                        </td>
+                                                        <td align="left" valign="middle">
+                                                            <input type="Number" class="form-control baselinetxt" hidden id="Q_45id_18885" name="Q_45id_18885" value="0.00">
+                                                            <span class="baselinelbl">0.00</span>
+                                                        </td>
+                                                        <td align="left" valign="middle">
+                                                            <input type="Number" class="form-control baselinetxt" hidden id="Q_46id_18885" name="Q_46id_18885" value="0.00">
+                                                            <span class="targetlbl">0.00</span>
+                                                        </td>
+                                                        <td align="left" valign="middle">
+                                                            <input type="Number" class="form-control baselinetxt" hidden id="Q_47id_18885" name="Q_47id_18885" value="0.00">
+                                                            <span class="baselinelbl">0.00</span>
+                                                        </td>
+                                                        <td align="left" valign="middle">
+                                                            <input type="Number" class="form-control baselinetxt" hidden id="Q_48id_18885" name="Q_48id_18885" value="0.00">
+                                                            <span class="targetlbl">0.00</span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td align="left" valign="middle">
+                                                            Number of woredas implementing CSI recommendations
+                                                            <input type="hidden" value="20458" name="id_20458" id="id_20458" />
+                                                        </td>
+                                                        <td align="left" valign="middle">
+                                                            0.00
+                                                        </td>
+                                                        <td align="left" valign="middle">
+                                                            <input type="Number" class="form-control baselinetxt" hidden id="Q_49id_20458" name="Q_49id_20458" value="0.00">
+                                                            <span class="baselinelbl">0.00</span>
+                                                        </td>
+                                                        <td align="left" valign="middle">
+                                                            <input type="Number" class="form-control baselinetxt" hidden id="Q_50id_20458" name="Q_50id_20458" value="0.00">
+                                                            <span class="targetlbl">0.00</span>
+                                                        </td>
+                                                        <td align="left" valign="middle">
+                                                            <input type="Number" class="form-control baselinetxt" hidden id="Q_51id_20458" name="Q_51id_20458" value="0.00">
+                                                            <span class="baselinelbl">0.00</span>
+                                                        </td>
+                                                        <td align="left" valign="middle">
+                                                            <input type="Number" class="form-control baselinetxt" hidden id="Q_52id_20458" name="Q_52id_20458" value="0.00">
+                                                            <span class="targetlbl">0.00</span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td align="left" valign="middle">
+                                                            Number of woredas covered by the&#xA;programme
+                                                            <input type="hidden" value="22031" name="id_22031" id="id_22031" />
+                                                        </td>
+                                                        <td align="left" valign="middle">
+                                                            0.00
+                                                        </td>
+                                                        <td align="left" valign="middle">
+                                                            <input type="Number" class="form-control baselinetxt" hidden id="Q_53id_22031" name="Q_53id_22031" value="0.00">
+                                                            <span class="baselinelbl">0.00</span>
+                                                        </td>
+                                                        <td align="left" valign="middle">
+                                                            <input type="Number" class="form-control baselinetxt" hidden id="Q_54id_22031" name="Q_54id_22031" value="0.00">
+                                                            <span class="targetlbl">0.00</span>
+                                                        </td>
+                                                        <td align="left" valign="middle">
+                                                            <input type="Number" class="form-control baselinetxt" hidden id="Q_55id_22031" name="Q_55id_22031" value="0.00">
+                                                            <span class="baselinelbl">0.00</span>
+                                                        </td>
+                                                        <td align="left" valign="middle">
+                                                            <input type="Number" class="form-control baselinetxt" hidden id="Q_56id_22031" name="Q_56id_22031" value="0.00">
+                                                            <span class="targetlbl">0.00</span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td align="left" valign="middle">
+                                                            Percentage of clients paid within&#xA;the agreed timeframe (20 days&#xA;for cash and 30 days for food)
+                                                            <input type="hidden" value="23604" name="id_23604" id="id_23604" />
+                                                        </td>
+                                                        <td align="left" valign="middle">
+                                                            0.00
+                                                        </td>
+                                                        <td align="left" valign="middle">
+                                                            <input type="Number" class="form-control baselinetxt" hidden id="Q_57id_23604" name="Q_57id_23604" value="0.00">
+                                                            <span class="baselinelbl">0.00</span>
+                                                        </td>
+                                                        <td align="left" valign="middle">
+                                                            <input type="Number" class="form-control baselinetxt" hidden id="Q_58id_23604" name="Q_58id_23604" value="0.00">
+                                                            <span class="targetlbl">0.00</span>
+                                                        </td>
+                                                        <td align="left" valign="middle">
+                                                            <input type="Number" class="form-control baselinetxt" hidden id="Q_59id_23604" name="Q_59id_23604" value="0.00">
+                                                            <span class="baselinelbl">0.00</span>
+                                                        </td>
+                                                        <td align="left" valign="middle">
+                                                            <input type="Number" class="form-control baselinetxt" hidden id="Q_60id_23604" name="Q_60id_23604" value="0.00">
+                                                            <span class="targetlbl">0.00</span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td align="left" valign="middle">
+                                                            Percentage of clients reporting&#xA;that they receive cash or food&#xA;transfers at a place less than 3&#xA;hours walking from their home -&#xA;disaggregated by sex
+                                                            <input type="hidden" value="25177" name="id_25177" id="id_25177" />
+                                                        </td>
+                                                        <td align="left" valign="middle">
+                                                            0.00
+                                                        </td>
+                                                        <td align="left" valign="middle">
+                                                            <input type="Number" class="form-control baselinetxt" hidden id="Q_61id_25177" name="Q_61id_25177" value="0.00">
+                                                            <span class="baselinelbl">0.00</span>
+                                                        </td>
+                                                        <td align="left" valign="middle">
+                                                            <input type="Number" class="form-control baselinetxt" hidden id="Q_62id_25177" name="Q_62id_25177" value="0.00">
+                                                            <span class="targetlbl">0.00</span>
+                                                        </td>
+                                                        <td align="left" valign="middle">
+                                                            <input type="Number" class="form-control baselinetxt" hidden id="Q_63id_25177" name="Q_63id_25177" value="0.00">
+                                                            <span class="baselinelbl">0.00</span>
+                                                        </td>
+                                                        <td align="left" valign="middle">
+                                                            <input type="Number" class="form-control baselinetxt" hidden id="Q_64id_25177" name="Q_64id_25177" value="0.00">
+                                                            <span class="targetlbl">0.00</span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td align="left" valign="middle">
+                                                            % transfers received that have a&#xA;value of at least 15 kg of cereals&#xA;and 4 kg of pulses per person&#xA;per month
+                                                            <input type="hidden" value="26750" name="id_26750" id="id_26750" />
+                                                        </td>
+                                                        <td align="left" valign="middle">
+                                                            0.00
+                                                        </td>
+                                                        <td align="left" valign="middle">
+                                                            <input type="Number" class="form-control baselinetxt" hidden id="Q_65id_26750" name="Q_65id_26750" value="0.00">
+                                                            <span class="baselinelbl">0.00</span>
+                                                        </td>
+                                                        <td align="left" valign="middle">
+                                                            <input type="Number" class="form-control baselinetxt" hidden id="Q_66id_26750" name="Q_66id_26750" value="0.00">
+                                                            <span class="targetlbl">0.00</span>
+                                                        </td>
+                                                        <td align="left" valign="middle">
+                                                            <input type="Number" class="form-control baselinetxt" hidden id="Q_67id_26750" name="Q_67id_26750" value="0.00">
+                                                            <span class="baselinelbl">0.00</span>
+                                                        </td>
+                                                        <td align="left" valign="middle">
+                                                            <input type="Number" class="form-control baselinetxt" hidden id="Q_68id_26750" name="Q_68id_26750" value="0.00">
+                                                            <span class="targetlbl">0.00</span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td align="left" valign="middle">
+                                                            Percentage of households&#xA;reporting that use of transfers is&#xA;decided jointly by wives and&#xA;husbands - disaggregated by sex
+                                                            <input type="hidden" value="28323" name="id_28323" id="id_28323" />
+                                                        </td>
+                                                        <td align="left" valign="middle">
+                                                            0.00
+                                                        </td>
+                                                        <td align="left" valign="middle">
+                                                            <input type="Number" class="form-control baselinetxt" hidden id="Q_69id_28323" name="Q_69id_28323" value="0.00">
+                                                            <span class="baselinelbl">0.00</span>
+                                                        </td>
+                                                        <td align="left" valign="middle">
+                                                            <input type="Number" class="form-control baselinetxt" hidden id="Q_70id_28323" name="Q_70id_28323" value="0.00">
+                                                            <span class="targetlbl">0.00</span>
+                                                        </td>
+                                                        <td align="left" valign="middle">
+                                                            <input type="Number" class="form-control baselinetxt" hidden id="Q_71id_28323" name="Q_71id_28323" value="0.00">
+                                                            <span class="baselinelbl">0.00</span>
+                                                        </td>
+                                                        <td align="left" valign="middle">
+                                                            <input type="Number" class="form-control baselinetxt" hidden id="Q_72id_28323" name="Q_72id_28323" value="0.00">
+                                                            <span class="targetlbl">0.00</span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td align="left" valign="middle">
+                                                            Percentage of clients receiving&#xA;woreda contingency resources&#xA;within 60 days of threshold&#xA;being reached
+                                                            <input type="hidden" value="29896" name="id_29896" id="id_29896" />
+                                                        </td>
+                                                        <td align="left" valign="middle">
+                                                            0.00
+                                                        </td>
+                                                        <td align="left" valign="middle">
+                                                            <input type="Number" class="form-control baselinetxt" hidden id="Q_73id_29896" name="Q_73id_29896" value="0.00">
+                                                            <span class="baselinelbl">0.00</span>
+                                                        </td>
+                                                        <td align="left" valign="middle">
+                                                            <input type="Number" class="form-control baselinetxt" hidden id="Q_74id_29896" name="Q_74id_29896" value="0.00">
+                                                            <span class="targetlbl">0.00</span>
+                                                        </td>
+                                                        <td align="left" valign="middle">
+                                                            <input type="Number" class="form-control baselinetxt" hidden id="Q_75id_29896" name="Q_75id_29896" value="0.00">
+                                                            <span class="baselinelbl">0.00</span>
+                                                        </td>
+                                                        <td align="left" valign="middle">
+                                                            <input type="Number" class="form-control baselinetxt" hidden id="Q_76id_29896" name="Q_76id_29896" value="0.00">
+                                                            <span class="targetlbl">0.00</span>
+                                                        </td>
+                                                    </tr>
+
+                                            </tbody>
+                                        </table>
+
+                                    </div>
+                                </div>
+                            <input name="__RequestVerificationToken" type="hidden" value="CfDJ8HfqWLKQCMFOhdNWmWergeYY7KftlPqKXuGUmOXWNGSP0FlZdL1wiKhLKVfA6zbHlJ1q-jIZzNrOcUwept0i8FbZ3taVwYxHDqfn7013j-Kv69kchPQZlYAX0PwcAqqmWre8pnmd28dw03tcZVjAvfdLMOVfyIPVYpQNtWFITia6crOtZtfyaUfN8zwkrxMzkA" /></form>
+                        </div>
+
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END container-fluid -->
+</div>
+
+
+            </div>
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            <p>  <a href="/Home/Privacy">Privacy</a>   &copy;  Copyright 2019 MoLSA, Ministry of Agriculture(MoA), All rights reserved.</p>
+        </div>
+    </footer>
+    
+
+        <script src="../assets/js/jquery-1.10.2.min.js"></script>
+        <script src="../assets/js/modernizr.min.js"></script>
+        <script src="../assets/js/jquery.min.js"></script>
+        <script src="../assets/js/moment.min.js"></script>
+        <script src="../assets/js/jquery-ui.min.js"></script>
+        <script src="../assets/js/popper.min.js"></script>
+        <script src="../assets/js/bootstrap.min.js"></script>
+        <script src="../assets/js/jquery.validate.min.js"></script>
+        <script src="../assets/js/detect.js"></script>
+        <script src="../assets/js/fastclick.js"></script>
+        <script src="../assets/js/jquery.blockUI.js"></script>
+        <script src="../assets/js/jquery.nicescroll.js"></script>
+        <script src="../assets/js/bootstrap-datepicker.min.js"></script>
+        <!-- App js -->
+        <script src="../assets/js/pikeadmin.js"></script>
+        <!-- BEGIN Java Script for this page -->
+        <script src="../assets/js/Chart.min.js"></script>>
+        <script src="../assets/js/highcharts.js"></script>
+        <!-- Counter-Up-->
+        <script src="../assets/plugins1/waypoints/lib/jquery.waypoints.min.js"></script>
+        <script src="../assets/plugins1/counterup/jquery.counterup.min.js"></script>
+
+        <script src="https://canvasjs.comassets/script/canvasjs.min.js"></script>
+        <script src="https://swisnl.github.io/jQuery-contextMenu/dist/jquery.contextMenu.min.js"></script>
+
+      
+
+
+                <script src="../assets/js/canvasjs.min.js"></script>
+
+        <script>
+            $(document).ready(function () {
+                //$('#example1').DataTable();
+                $('.datepicker').datepicker({
+                    format: "dd-M-yyyy",
+                    todayBtn: "linked",
+                    autoclose: true,
+                    todayHighlight: true
+                });
+
+            });
+        </script>
+
+        <script>
+                                                var currentdate = new Date();
+                                                var weekday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+                                                var month = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+                                                var hours = currentdate.getHours();
+                                                var minutes = currentdate.getMinutes();
+                                                var ampm = hours >= 12 ? 'PM' : 'AM';
+                                                hours = hours % 12;
+                                                hours = hours ? hours : 12; // the hour '0' should be '12'
+                                                minutes = minutes < 10 ? '0' + minutes : minutes;
+var strTime = hours + ':' + minutes + ' ' + ampm;
+
+
+var datetime = strTime + ", "
+                + weekday[currentdate.getDay()] + ", "
+                + month[currentdate.getMonth()] + " "
+                + currentdate.getDate() + ", "
+                //+ (currentdate.getMonth()+1)  + "/"
+                + currentdate.getFullYear() + " "
+
+                                                //+ currentdate.getFullYear() + " </br> "
+                    // + currentdate.getHours() + ":"
+                    // + currentdate.getMinutes() + " "
+                    // + currentdate.getSeconds();
+                    document.getElementById("cdateTime").innerHTML = datetime;
+
+                    //tree view location details script
+                    $(document).ready(function () {
+                        $.fn.extend({
+                            treed: function (o) {
+
+                                var openedClass = 'fa fa-minus';
+                                var closedClass = 'fa fa-plus';
+
+                                if (typeof o != 'undefined') {
+                                    if (typeof o.openedClass != 'undefined') {
+                                        openedClass = o.openedClass;
+                                    }
+                                    if (typeof o.closedClass != 'undefined') {
+                                        closedClass = o.closedClass;
+                                    }
+                                }
+                                ;
+                                //initialize each of the top levels
+                                var tree = $(this);
+                                tree.addClass("tree");
+                                tree.find('li').has("ul").each(function () {
+                                    var branch = $(this); //li with children ul
+                                    branch.prepend("<i class='indicator glyphicon " + closedClass + "'></i>");
+                                    branch.addClass('branch');
+                                    branch.on('click', function (e) {
+                                        if (this == e.target) {
+                                            var icon = $(this).children('i:first');
+                                            icon.toggleClass(openedClass + " " + closedClass);
+                                            $(this).children().children().toggle();
+                                        }
+                                    })
+                                    branch.children().children().toggle();
+                                });
+                                //fire event from the dynamically added icon
+                                tree.find('.branch .indicator').each(function () {
+                                    $(this).on('click', function () {
+                                        $(this).closest('li').click();
+                                    });
+                                });
+                                //fire event to open branch if the li contains an anchor instead of text
+                                tree.find('.branch>a').each(function () {
+                                    $(this).on('click', function (e) {
+                                        $(this).closest('li').click();
+                                        e.preventDefault();
+                                    });
+                                });
+                                //fire event to open branch if the li contains a button instead of text
+                                tree.find('.branch>button').each(function () {
+                                    $(this).on('click', function (e) {
+                                        $(this).closest('li').click();
+                                        e.preventDefault();
+                                    });
+                                });
+                            }
+                        });
+
+                        //Initialization of treeviews
+
+                        $('#tree1').treed();
+
+                        $('#tree2').treed({ openedClass: 'glyphicon-folder-open', closedClass: 'glyphicon-folder-close' });
+
+                        $('#tree3').treed({ openedClass: 'glyphicon-chevron-right', closedClass: 'glyphicon-chevron-down' });
+
+                    });
+                    // END CODE FOR BASIC DATA TABLE
+
+        </script>
+        <script>
+            $('#txtLevelEngSearch').keyup(function () {
+                var filter_text = $(this).val();
+                // If user input is not null
+                if (filter_text) {
+                    // Iterate through all branches
+                    $('.tree-li-ul').each(function () {
+                        // Initiate match flag to false for this branch
+                        var match_flag = false
+                        // Iterate through all items within one branch
+                        $(this).children().each(function () {
+                            // If user input matches this item
+                            if ($(this).children().text().toLowerCase().indexOf(filter_text) >= 0) {
+                                // Set match_flag for this branch to true
+                                match_flag = true;
+                                // Expand this branch
+                                $(this).parent().addClass('tree-open');
+                                // Show this item
+                                $(this).slideDown();
+                            }
+                            // If user input doesn't match this item
+                            else {
+                                // Hide this item
+                                $(this).slideUp();
+                                // If user input doesn't match any item in this branch, collapse this branch
+                                if (!match_flag) $(this).parent().parent().removeClass('tree-open');
+                            }
+                        });
+                    });
+
+                }
+                // If user input is null
+                else {
+                    // Hide all the branches
+                    $('.tree-li-ul').removeClass('tree-open');
+                    // Show all items
+                    $('.tree-li-ul-li').slideDown();
+                }
+            });
+        </script>
+        <!-- END Java Script for this page -->
+    
+    
+    <script src="../assets/js//site.js?v=4q1jwFhaPaZgr8WAUSrux6hAuh0XDg9kPS3xIVq36I0"></script>
+
+
+    <script>
+                // localization script
+                // Usage: requires class="localize" and data-key=
+                // Resharper creates and error on GetLocal but it is ok.
+
+    </script>
+    
+    <script>
+            $('#loadbtn').on('click', function () {
+
+            })
+
+            $('#editbtn').on('click', function () {
+                $('#submitbtn').removeAttr('hidden', 'hidden');
+                $('#editbtn').attr('hidden', 'hidden');
+                $('#savebtn').removeAttr('hidden');
+                $('.baselinetxt').removeAttr('hidden');;
+                $('.targettxt').removeAttr('hidden');
+                $('.baselinelbl').attr('hidden', 'hidden');
+                $('.targetlbl').attr('hidden', 'hidden');
+            })
+
+             $('#savebtn').on('click', function () {
+                $('#submitbtn').attr('hidden', 'hidden');
+                $('#editbtn').removeAttr('hidden', 'hidden');
+                $('#savebtn').attr('hidden', 'hidden');
+                $('.baselinetxt').attr('hidden', 'hidden');
+                $('.targettxt').attr('hidden', 'hidden');
+                $('.baselinelbl').removeAttr('hidden');
+                $('.targetlbl').removeAttr('hidden');
+            });
+            $('#submitbtn').on('click', function () {
+                $('#submitbtn').attr('hidden', 'hidden');
+                $('#editbtn').removeAttr('hidden', 'hidden');
+                $('#savebtn').attr('hidden', 'hidden');
+                $('.baselinetxt').attr('hidden', 'hidden');
+                $('.targettxt').attr('hidden', 'hidden');
+                $('.baselinelbl').removeAttr('hidden');
+                $('.targetlbl').removeAttr('hidden');
+            });
+    </script>
+
+</body>
+</html>
